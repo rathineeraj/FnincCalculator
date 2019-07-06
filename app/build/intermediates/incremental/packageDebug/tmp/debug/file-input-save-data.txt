@@ -1,0 +1,35 @@
+#Internal package file, do not edit.
+#Thu Jun 20 18:58:18 IST 2019
+7.path=Scripts/jquery-3.3.1.js
+2.base=D\:\\AndroidStudioProjects\\FnincCalculator\\app\\build\\intermediates\\merged_assets\\debug\\out
+5.set=DEX
+0.path=calculator.html
+2.baseType=DIRECTORY
+3.base=D\:\\AndroidStudioProjects\\FnincCalculator\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\out
+7.baseType=DIRECTORY
+2.set=ASSET
+1.path=Scripts/jquery-ui.css
+4.base=D\:\\AndroidStudioProjects\\FnincCalculator\\app\\build\\intermediates\\merged_assets\\debug\\out
+7.set=ASSET
+count=8
+5.baseType=DIRECTORY
+2.path=Scripts/jquery-ui.js
+5.base=D\:\\AndroidStudioProjects\\FnincCalculator\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\out
+4.set=ASSET
+3.path=classes2.dex
+6.base=D\:\\AndroidStudioProjects\\FnincCalculator\\app\\build\\intermediates\\merged_assets\\debug\\out
+3.baseType=DIRECTORY
+1.set=ASSET
+4.path=Scripts/styles.css
+7.base=D\:\\AndroidStudioProjects\\FnincCalculator\\app\\build\\intermediates\\merged_assets\\debug\\out
+6.set=ASSET
+1.baseType=DIRECTORY
+6.baseType=DIRECTORY
+5.path=classes.dex
+0.base=D\:\\AndroidStudioProjects\\FnincCalculator\\app\\build\\intermediates\\merged_assets\\debug\\out
+0.baseType=DIRECTORY
+3.set=DEX
+6.path=fonts/Arial Narrow.ttf
+1.base=D\:\\AndroidStudioProjects\\FnincCalculator\\app\\build\\intermediates\\merged_assets\\debug\\out
+4.baseType=DIRECTORY
+0.set=ASSET

@@ -1,0 +1,64 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <EditText
+        android:id="@+id/etDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bgedittext"
+        android:focusable="false"
+        android:hint="Date"
+        android:padding="10dp" />
+
+    <EditText
+        android:id="@+id/etDays"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bgedittext"
+        android:inputType="number"
+        android:hint="Days"
+        android:padding="10dp" />
+
+    <CheckBox
+        android:id="@+id/chk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Exclude Weekends"/>
+
+    <CheckBox
+        android:id="@+id/chkHolidays"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Exclude Public Holidays"/>
+
+    <Button
+        android:id="@+id/btnFindDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin10"
+
+        android:background="@drawable/bgbtn"
+        android:text="@string/find_date"
+        android:textColor="#c5c5c5" />
+
+
+    <TextView
+        android:id="@+id/tvFutureDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@android:color/black"
+        android:textSize="24sp"
+        android:layout_marginTop="30dp"
+        android:textStyle="bold" />
+
+
+</LinearLayout>

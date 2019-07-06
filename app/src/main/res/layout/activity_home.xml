@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <ImageView
+        android:id="@+id/ivlogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/margin10"
+        android:src="@drawable/iconmain" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ivlogo"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/bottomtitle" />
+
+    <LinearLayout
+        android:id="@+id/llButtons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:padding="@dimen/margin10">
+
+        <Button
+            android:id="@+id/btnCalculator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bgbtn"
+            android:text="@string/cost_calculator"
+            android:textColor="#c5c5c5" />
+        <Button
+            android:id="@+id/btnCapitalGain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin10"
+            android:background="@drawable/bgbtn"
+            android:text="@string/capital_gains"
+            android:textColor="#c5c5c5" />
+        <Button
+            android:id="@+id/btnCalender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin10"
+            android:background="@drawable/bgbtn"
+            android:text="@string/calender"
+            android:textColor="#c5c5c5" />
+
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin10"
+            android:background="@drawable/bgbtn"
+            android:text="@string/login_account"
+            android:textColor="#c5c5c5" />
+
+        <Button
+            android:id="@+id/btnFeedback"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin10"
+            android:background="@drawable/bgbtn"
+            android:text="@string/feedback"
+            android:textColor="#c5c5c5" />
+
+        <Button
+            android:id="@+id/btnContactUs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin10"
+            android:background="@drawable/bgbtn"
+            android:text="@string/contact_us"
+            android:textColor="#c5c5c5" />
+
+
+
+
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/tvInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/llButtons"
+        android:ellipsize="marquee"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:padding="5dip"
+        android:scrollHorizontally="true"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:singleLine="true"
+        android:text="We can register in 17 days. Ask us how..." />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="20dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/banner"
+        android:visibility="gone" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/margin10"
+        android:src="@drawable/iconmain" />
+
+</RelativeLayout>

@@ -1,0 +1,737 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="scripts/CGT/jquery-ui.css"/>
+    <link rel="stylesheet" href="http://www.fninc.co.za/styles.css">
+    <script src="scripts/CGT/jquery-3.3.1.js"></script>
+    <script src="scripts/CGT/jquery-ui.js"></script>
+  
+    <script>
+        jQuery.fn.ForceNumericOnly =
+            function () {
+                return this.each(function () {
+                    $(this).keydown(function (e) {
+                        var key = e.charCode || e.keyCode || 0;
+                        // allow backspace, tab, delete, enter, arrows, numbers and keypad numbers ONLY
+                        // home, end, period, and numpad decimal
+                        return (
+                            key == 8 ||
+                            key == 9 ||
+                            key == 13 ||
+                            key == 46 ||
+                            key == 110 ||
+                            key == 190 ||
+                            (key >= 35 && key <= 40) ||
+                            (key >= 48 && key <= 57) ||
+                            (key >= 96 && key <= 105));
+                    });
+                });
+            };
+
+        var beforeOct = false;
+        var valDoc = false;
+        var noRecordsKept = false;
+        $("input[type='text']").on("click", function () {
+            $(this).select();
+        });
+
+        $(document).ready(function () {
+            $("#trBaseCost").hide();
+            $("#trBaseCostNew").hide();
+            $("#trNettProfitNew").hide();
+            $("#predate").hide();
+            $('input:radio[name="radio-1"]').on("click", function () {
+
+                $("#Primaryresidence").hide();
+
+                switch ($('input:radio[name=radio-1]:checked').val()) {
+                    case "natPerson":
+                        $("#Primaryresidence").show();
+                        break;
+                }
+
+                calculateFigures();
+
+            });
+
+            $('input:radio[name="rdPreOct"]').on("click", function () {
+
+                preDateRadioButtons();
+
+            });
+
+            $('input:checkbox[name="chkPrimaryResidence"]').on("click", calculateFigures);
+            $('input:checkbox[name="chkAnnualCapitalGains"]').on("click", calculateFigures);
+            $('input:radio[name="taxBracket"]').on("click", calculateFigures);
+            $('input:checkbox[name="chkAcceptTerrms"]').on("click", acceptTerms);
+            $('input:checkbox[name="chkdocValuation"]').on("click", valuateDoc);
+            $('input:checkbox[name="chkRecordsKept"]').on("click", noRecords);
+
+            acceptTerms();
+            noRecords();
+        });
+
+        function preDateRadioButtons() {
+
+            $("#documentaryValue").hide();
+            $("#manValuation").hide();
+            $("#trPurchasePrice").hide();
+            $("#trBaseCost").hide();
+
+
+            switch ($('input:radio[name=rdPreOct]:checked').val()) {
+                case "haveDoc":
+                    $("#documentaryValue").show();
+                    break;
+                case "fillRecords":
+                    $("#manValuation").show();
+                    $("#trPurchasePrice").show();
+                    break;
+                case "noRecords":
+                    $("#trBaseCost").show();
+                    break;
+            }
+
+            calculateFigures();
+        }
+
+        function noRecords() {
+            //if ($('#chkRecordsKept').is(":checked")) {
+
+            //    $("#manValuation").hide();
+            //    noRecordsKept = true;
+            //    $("#lblOriginalPrice").text("20% of your(sale price less expenditure incurred on or after valuation date) will be deemed to be your base costs:");
+            //    calculateFigures;
+            //}
+            //else {
+            //    $("#manValuation").show();
+            //    noRecordsKept = false;
+            //    $("#lblOriginalPrice").text("Less base costs:");
+            //    calculateFigures;
+            //}
+        }
+
+        function valuateDoc() {
+            //if ($('#chkdocValuation').is(":checked")) {
+            //    $("#documentaryValue").show();
+            //    $("#noRecordsKept").hide();
+            //    $("#manValuation").hide();
+            //    valDoc = true;
+            //    calculateFigures;
+            //}
+            //else {
+            //    $("#documentaryValue").hide();
+            //    $("#manValuation").show();
+            //    $("#noRecordsKept").show();
+            //    valDoc = false;
+            //    noRecords();
+
+            //}
+        }
+
+        $(function () {
+
+            $("#purchaseDate").datepicker({
+                dateFormat: 'dd/mm/yy',//check change
+                changeMonth: true,
+                changeYear: true,
+                onSelect: function (dateText, inst) {
+
+                    var dateSplit = dateText.split("/");
+                    var date1;
+                    if (dateSplit[0].length == 4) {
+                        date1 = new Date(dateSplit[0], dateSplit[1] - 1, dateSplit[2], 0, 0, 0, 0);
+                    }
+                    else {
+                        date1 = new Date(dateSplit[2], dateSplit[1] - 1, dateSplit[0], 0, 0, 0, 0);
+                    }
+
+                    var date2 = new Date(2001, 9, 1);
+                    if (date1 < date2) {                   
+                        beforeOct = true;
+                        preDateRadioButtons();                    
+                        calculateFigures();
+                    }
+                    else {
+                        // $("#trAdvertising").show();
+                        // $("#trBondCosts").show();
+                        //$("#trTransferCosts").show();
+                        $("#lblAdvertising").text("Less private advertising costs (if any):");
+                        $("#predate").hide();
+                        $("#lblOriginalPrice").text("Less the price you originally purchased the property:");
+                        $("#lblImprovements").text("Less value of improvements you made to property (*must be able to prove the value to SARS):");
+                        $("#purchasePrice").prop('readonly', false);
+                        beforeOct = false;
+                        $("#purchasePrice").css({ 'background-color': 'none' });
+                        
+                        calculateFigures();
+                    }
+
+                }
+            }
+            );
+
+            $('#purchaseDate').datepicker().keydown(function (event) {
+                if (event.which === $.ui.keyCode.ENTER) {
+                    $("#purchaseDate").datepicker("hide");
+                }
+                else {
+                    $("#purchaseDate").datepicker("show");
+                }
+            });
+
+            $('input[type="radio"]').checkboxradio();
+            $("#salePrice").ForceNumericOnly();
+            $("#purchasePrice").ForceNumericOnly();
+
+            $("#improvements").ForceNumericOnly();
+            $("#transferCosts").ForceNumericOnly();
+            $("#bondCosts").ForceNumericOnly();
+            $("#advertisingCosts").ForceNumericOnly();
+            $("#complianceCosts").ForceNumericOnly();
+            $("#agentCommision").ForceNumericOnly();
+            $("#noOwners").ForceNumericOnly();
+
+            $("#expenditureVal").ForceNumericOnly();
+            $("#salesProceeds").ForceNumericOnly();
+            $("#ownedAfter").ForceNumericOnly();
+            $("#ownerBefore").ForceNumericOnly();
+
+            $("input[type='text']").on("click", function () {
+                $(this).select();
+            });
+
+            $("input[type='text']").on("blur", calculateFigures);
+            $("input[type='text']").on("focus", calculateFigures);
+
+
+        });
+
+        function acceptTerms() {
+            if ($('#chkAcceptTerrms').is(":checked")) {
+                $("#mainCalculator").show();
+            }
+            else {
+                $("#mainCalculator").hide();
+            }
+        }
+
+        function calculateFigures() {
+            var valDocValue = 0;
+            var percBase = false;
+            var Option2 = false;
+            var Option3 = false;
+            //if (beforeOct) {
+            //    if (valDoc) {
+            //        valDocValue = $("#docValue").val();
+            //        $("#purchasePrice").attr("value", valDocValue);
+            //    }
+            //    else {
+            //        if (!noRecordsKept) {
+            //            var valB = parseFloat($("#expenditureVal").val());
+            //            var valP = parseFloat($("#salesProceeds").val());
+            //            var valN = parseFloat($("#ownedAfter").val());
+            //            var valT = parseFloat($("#ownerBefore").val());
+            //            var valBase = 0.00;
+            //            valBase += (valP - valB);
+            //            valBase = valBase * valN;
+            //            valBase += valB;
+            //            valBase = valBase / (valT + valN);
+            //            $("#purchasePrice").attr("value", valBase.toFixed(2));
+            //        }
+            //        else {
+
+            //            $("#purchasePrice").attr("value", $("#salePrice").val() * 0.20);
+            //        }
+            //    }
+            //}
+         $("#lblBCost").text("BASE COST:");
+         $("#salesProceeds").prop('readonly', false);
+         $("#salesProceeds").css({ 'background-color': 'none' });
+       
+         
+            if (beforeOct) {
+
+                $("#trBondCosts").show();
+                $("#trTransferCosts").show();
+                $("#predate").show();
+                $("#trBaseCostNew").hide();
+                $("#trNettProfitNew").hide();
+                switch ($('input:radio[name=rdPreOct]:checked').val()) {
+                    case "haveDoc":
+                        valDocValue = $("#docValue").val();
+                        $("#purchasePrice").attr("value", valDocValue);
+                        break;
+                    case "fillRecords":
+                         $("#salesProceeds").attr("value", $("#salePrice").val());
+                         $("#trBondCosts").hide();
+                         $("#trTransferCosts").hide();
+                        var valB = parseFloat($("#expenditureVal").val());
+                        var valP = parseFloat($("#salesProceeds").val());
+                        var valN = parseFloat($("#ownedAfter").val());
+                        var valT = parseFloat($("#ownerBefore").val());
+                        var valBase = 0.00;
+                        valBase += (valP - valB);
+                        valBase = valBase * valN;
+                        valBase = valBase / (valT + valN);
+                        valBase += valB;
+                        
+                        $("#purchasePrice").attr("value", valBase.toFixed(2));
+                        $("#lblBCost").text("BASE COST");
+                        Option2 = true;
+                        break;
+                    case "noRecords":
+                         $("#trBondCosts").hide();
+                         $("#trTransferCosts").hide();
+                        $("#lblBCost").text("Post  1 Oct 2001 Expenses");
+                        $("#trBaseCostNew").show();
+                        $("#trNettProfitNew").show();
+                        percBase = true;
+                        Option3 = true; 
+                        break;
+                }
+            }
+
+
+            var vSalePrice = $("#salePrice").val();
+
+            var vPurchasePrice = $("#purchasePrice").val();
+            var vImprovements = $("#improvements").val();
+            var vTransferCosts = $("#transferCosts").val();
+            var vBondCosts = $("#bondCosts").val();
+            var vAgentCommision = $("#agentCommision").val();
+            var vAdvertisingCosts = $("#advertisingCosts").val();
+            var vComplianceCosts = $("#complianceCosts").val();
+            var vNoOwners = $("#noOwners").val();
+            var vNettProfit;
+            var vBaseCost=0.00;
+            var vCapitalGains;
+            var vCGTProfitPerc;
+            var vCGTPayable;
+            var allowExpenses=0.00;   
+            
+            vNettProfit = vSalePrice;
+                       
+            if (!Option2 && !Option3)
+            {
+                
+                vBaseCost += parseFloat(vPurchasePrice);
+                vBaseCost += parseFloat(vImprovements);
+                vBaseCost += parseFloat(vAgentCommision);
+                vBaseCost += parseFloat(vComplianceCosts);
+                vBaseCost += parseFloat(vTransferCosts);
+                vBaseCost += parseFloat(vBondCosts);
+                vBaseCost += parseFloat(vAdvertisingCosts)
+                vNettProfit -= vBaseCost
+                $("#lblImprovements").text("Less value of improvements you made to the property after I Oct 2001(* must be able to prove the value to SARS)");
+                $("#NettProfit").attr("value", vNettProfit.toFixed(2));
+                $("#baseCostPre2001").attr("value", parseFloat(vBaseCost).toFixed(2));
+                $("#trBaseCost").hide(); 
+                $("#lblNettProfit").hide();
+                $("#lblNettProfit").show();
+            }
+            else if (Option2)
+            {
+                $("#salesProceeds").prop('readonly', true);
+                $("#salesProceeds").css({ 'background-color': 'silver' });
+                $("#salesProceeds").attr("value", $("#salePrice").val());    
+                vBaseCost += parseFloat(vPurchasePrice);
+                allowExpenses +=  parseFloat(vImprovements);
+                allowExpenses += parseFloat(vAgentCommision);
+                allowExpenses += parseFloat(vComplianceCosts);
+                allowExpenses += parseFloat(vAdvertisingCosts)
+                vNettProfit -= (vBaseCost + allowExpenses);
+                $("#NettProfit").attr("value", vNettProfit.toFixed(2));
+                $("#baseCostPre2001").attr("value", parseFloat(allowExpenses).toFixed(2));
+               
+                $("#lblOriginalPrice").text("VALUATION DATE VALUE:");
+                $("#lblAdvertising").text("Less private advertising costs after 1 Oct 2001 (if any):");
+                $("#lblImprovements").text("Less improvements you made to the property after 1 Oct 2001(* must be able to prove the value to SARS)");
+                $("#purchasePrice").prop('readonly', true);
+                $("#purchasePrice").css({ 'background-color': 'silver' });
+                $("#trBaseCost").hide();
+               
+            }
+            else if (Option3)
+            {
+                var vNewBaseCost = 0.00;
+                var vNewNettProfit = 0.00;
+                allowExpenses +=  parseFloat(vImprovements);
+                allowExpenses += parseFloat(vAgentCommision);
+                allowExpenses += parseFloat(vComplianceCosts);
+                allowExpenses += parseFloat(vAdvertisingCosts)
+                vNettProfit -= allowExpenses;
+                $("#NettProfit").attr("value", vNettProfit.toFixed(2));
+                $("#baseCostPre2001").attr("value", parseFloat(allowExpenses).toFixed(2));
+                $("#predate").show();
+                $("#lblOriginalPrice").text("Base costs:");
+                $("#lblAdvertising").text("Less private advertising costs after 1 Oct 2001 (if any):");
+                $("#lblImprovements").text("Less improvements you made to the property after 1 Oct 2001 (*must be able to prove the value to SARS)");
+                $("#purchasePrice").prop('readonly', true);
+                $("#purchasePrice").css({ 'background-color': 'silver' });
+                $("#trBaseCost").show();
+                $("#NettProfit").hide();
+                $("#NettProfit").hide();
+                vNewBaseCost = (vNettProfit * 0.2) + allowExpenses;
+                vNewNettProfit = vSalePrice - vNewBaseCost;
+                $("#BaseCostNew").attr("value", vNewBaseCost.toFixed(2));
+                $("#NettProfitNew").attr("value", vNewNettProfit.toFixed(2));
+            }
+
+            if ($("#NettProfit").val() == "NaN" || $("#NettProfit").val() == "Infinity" || $("#NettProfit").val() == "-Infinity")
+                {
+                     $("#NettProfit").attr("value", "Waiting to Calculate...");
+                }
+                  if ($("#purchasePrice").val() == "NaN" || $("#purchasePrice").val() == "Infinity" || $("#purchasePrice").val() == "-Infinity")
+                {
+                     $("#purchasePrice").attr("value", "Waiting to Calculate...");
+                }
+            
+        
+            if (percBase) {
+                $("#BaseCost").attr("value", (vNettProfit * 0.2).toFixed(2));
+                vNettProfit = vNewNettProfit;
+               
+               
+            }
+
+
+            if (vNettProfit != 0 && vNoOwners != 0) {
+                vCapitalGains = vNettProfit / vNoOwners;
+            }
+            else {
+                vCapitalGains = vNettProfit
+            }
+
+
+
+
+
+            if ($('input:radio[name=radio-1]:checked').val() == "natPerson") {
+
+                $("#lblPercCGT").text("40% of the Capital Gains Taxable Profit:");
+
+                if ($('#chkPrimaryResidence').is(":checked")) {
+                    vCapitalGains -= 2000000;
+                }
+                if (!$('#chkAnnualCapitalGains').is(":checked")) {
+                    vCapitalGains -= 40000;
+                }
+
+                vCGTProfitPerc = vCapitalGains * 0.4;
+
+                switch ($('input:radio[name=taxBracket]:checked').val()) {
+                    case "taxBracket1":
+                        vCGTPayable = vCGTProfitPerc * 0.18
+                        $("#lblCGTPayable").text("Your CGT payable (18%) :");
+                        break;
+                    case "taxBracket2":
+                        vCGTPayable = vCGTProfitPerc * 0.26
+                        $("#lblCGTPayable").text("Your CGT payable (26%) :");
+                        break;
+                    case "taxBracket3":
+                        vCGTPayable = vCGTProfitPerc * 0.31
+                        $("#lblCGTPayable").text("Your CGT payable (31%) :");
+                        break;
+                    case "taxBracket4":
+                        vCGTPayable = vCGTProfitPerc * 0.36
+                        $("#lblCGTPayable").text("Your CGT payable (36%) :");
+                        break;
+                    case "taxBracket5":
+                        vCGTPayable = vCGTProfitPerc * 0.39
+                        $("#lblCGTPayable").text("Your CGT payable (39%) :");
+                        break;
+                    case "taxBracket6":
+                        vCGTPayable = vCGTProfitPerc * 0.41
+                        $("#lblCGTPayable").text("Your CGT payable (41%) :");
+                        break;
+                    case "taxBracket7":
+                        vCGTPayable = vCGTProfitPerc * 0.45
+                        $("#lblCGTPayable").text("Your CGT payable (45%) :");
+                        break;
+                }
+            }
+
+            if ($('input:radio[name=radio-1]:checked').val() == "closeCorporation") {
+
+                vCGTProfitPerc = vCapitalGains * 0.8;
+                vCGTPayable = vCGTProfitPerc * 0.28;
+                $("#lblPercCGT").text("80% of the Capital Gains Taxable Profit:");
+                $("#lblCGTPayable").text("Your CGT payable (28%) :");
+            }
+
+            if ($('input:radio[name=radio-1]:checked').val() == "company") {
+
+                vCGTProfitPerc = vCapitalGains * 0.8;
+                vCGTPayable = vCGTProfitPerc * 0.28;
+                $("#lblPercCGT").text("80% of the Capital Gains Taxable Profit:");
+                $("#lblCGTPayable").text("Your CGT payable (28%) :");
+            }
+
+            if ($('input:radio[name=radio-1]:checked').val() == "trust") {
+
+                vCGTProfitPerc = vCapitalGains * 0.8;
+                vCGTPayable = vCGTProfitPerc * 0.45;
+                $("#lblPercCGT").text("80% of the Capital Gains Taxable Profit:");
+                $("#lblCGTPayable").text("Your CGT payable (45%) :");
+            }
+            if (vCapitalGains > 0) { $("#CGTProfit").attr("value", vCapitalGains.toFixed(2)); }
+            else { $("#CGTProfit").attr("value", 0); }
+            if (vCGTProfitPerc > 0) { $("#CGTProfitPerc").attr("value", vCGTProfitPerc.toFixed(2)); }
+            else { $("#CGTProfitPerc").attr("value", 0); }
+            if (vCGTPayable > 0) { $("#CGTPayable").attr("value", vCGTPayable.toFixed(2)); }
+            else { $("#CGTPayable").attr("value", 0); }
+        }
+
+    </script>
+</head>
+<body>
+
+<div id="mainCalculator">
+        <div id="dateSelector">
+            <table style="width:100%" >
+                <tr>
+                    <td colspan="2" align="left">
+                        <input style="background-color:#7030a0; color:#FFF; font-size:16px; padding:5px 5px 3px 5px;" type="button" value="RESET"  onClick="window.location.reload()"/> 
+                    <span style="color:#7030a0">(*Remember to click reset  button for every new calculation)</span></td>
+                </tr>
+                <tr>
+                    <td height="30" align="right" style="width:60%">Original Purchase Date:</td>
+                    <td> <input type="text" id="purchaseDate"> [e.g 01/11/2010]  </td>
+                </tr>
+            </table>
+        </div>
+        <div id="divPurchasePrice">
+            <table style="width:100%">
+                <tr>
+                    <td height="30" align="right" style="width:60%">Insert purchase price you have sold your property for:</td>
+                    <td><input type="text" id="salePrice" style="text-align:right" value="0" /></td>
+                </tr>
+            </table>
+        </div>
+        <div id="predate">
+            <div id="choosePreDate">
+                <table style="width:100%">
+                    <tr>
+                        <td colspan="2" align="center"><br>
+                            <fieldset>
+                                <legend></legend>
+                                <label for="rd-1">Did you obtain a valuation as at 1 Oct 2001</label>
+                                <input type="radio" name="rdPreOct" id="rd-1" value="haveDoc" checked="checked">
+                                <label for="rd-2">If not, can you answer the following questions</label>
+                                <input type="radio" name="rdPreOct" id="rd-2" value="fillRecords">
+                                <label for="rd-3">I did not keep records and unable to answer any questions</label>
+                                <input type="radio" name="rdPreOct" id="rd-3" value="noRecords">
+                            </fieldset>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <div id="documentaryValue">
+                <table style="width:100%">
+                    <tr>
+                        <td style="width:60%" align="right">Insert the value of the documentary valuation you obtained as at 1 Oct 2001:</td>
+                        <td><input type="text" id="docValue" style="text-align:right" value="0" /></td>
+                    </tr>
+                </table>
+            </div>
+            <div id="manValuation">
+                <table style="width:100%">
+                    <tr>
+                        <td height="30" align="right" style="width:60%">Expenditure on the property incurred before 1 Oct 2001 <br>
+                          (*must be able to prove the value to SARS):</td>
+                        <td><input type="text" id="expenditureVal" style="text-align:right" value="0" /></td>
+                    </tr>
+                    <tr>
+                        <td height="30" align="right" style="width:60%">Sale price you achieved:</td>
+                        <td><input type="text" id="salesProceeds" style="text-align:right" value="0" /></td>
+                    </tr>
+                    <tr>
+                        <td height="30" align="right" style="width:60%">Number of years you owned the property before 1 October 2001:</td>
+                        <td><input type="text" id="ownedAfter" style="text-align:right" value="0" /></td>
+                    </tr>
+                    <tr>
+                        <td height="30" align="right" style="width:60%">Number of years you owned the property after 1 October 2001:</td>
+                        <td><input type="text" id="ownerBefore" style="text-align:right" value="0" /></td>
+                    </tr>
+                </table>
+            </div>
+
+        </div>
+
+        <div id="generalPricing">
+            <table style="width:100%">
+                <tr id="trPurchasePrice">
+                    <td height="30" align="right" style="width:60%"> <label id="lblOriginalPrice">Less the price you originally purchased the property:</label></td>
+                    <td><input type="text" id="purchasePrice" style="text-align:right" value="0" /></td>
+                </tr>
+                <tr>
+                    <td height="30" align="right" style="width:60%">
+                        <label id="lblImprovements">
+                            Less value of improvements you made to property
+                              <br>
+                            (*must be able to prove the value to SARS): </label>
+                    </td>
+                    <td> <input type="text" id="improvements" style="text-align:right" value="0" /></td>
+                </tr>
+                <tr id="trTransferCosts">
+                    <td height="30" align="right">Less the transfer costs you paid when you purchased:</td>
+                    <td><input type="text" id="transferCosts" style="text-align:right" value="0" /></td>
+                </tr>
+                <tr id="trBondCosts">
+                    <td height="30" align="right">Less the bond costs you paid when you purchased: </td>
+                    <td><input type="text" id="bondCosts" style="text-align:right" value="0" /></td>
+                </tr>
+                <tr>
+                    <td height="30" align="right">Less the Agents Commission you will pay upon the sale:</td>
+                    <td><input type="text" id="agentCommision" style="text-align:right" value="0" /></td>
+                </tr>
+                <tr id="trAdvertising">
+                    <td height="30" align="right"> <label id="lblAdvertising">Less private advertising costs (if any):</label></td>
+                    <td><input type="text" id="advertisingCosts" style="text-align:right" value="0" /></td>
+                </tr>
+                <tr>
+                    <td height="30" align="right">Less bond cancellation costs and certificates of compliance <br>
+                      (i.e electrical, beetle, plumbing, gas and electrical fence):</td>
+                    <td><input type="text" id="complianceCosts" style="text-align:right" value="0" /></td>
+                </tr>
+                <tr>
+                    <td height="30" align="right"><label id="lblBCost">BASE COST:</label></td>
+                    <td><input type="text" id="baseCostPre2001" style="text-align:right;background-color:silver" readonly="readonly" value="0" /></td>
+                </tr>
+                <tr>
+                    <td height="30" align="right"><label id="lblNettProfit">NETT PROFIT:</label></td>
+                    <td><input type="text" id="NettProfit" readonly="readonly" style="text-align:right;background-color:silver" value="0" /></td>
+                </tr>
+                <tr id="trBaseCost">
+                    <td height="30" align="right">
+                        20% of (sale price less expenditure incurred on or after valuation date) <br>
+                        will be deemed to be your VALUATION DATE VALUE: </td>
+                    <td><input type="text" id="BaseCost" readonly="readonly" style="text-align:right;background-color:silver" value="0" /></td>
+                </tr>
+                <tr id="trBaseCostNew">
+                    <td height="30" align="right">
+                        BASE COST:
+                    </td>
+                    <td><input type="text" id="BaseCostNew" readonly="readonly" style="text-align:right;background-color:silver" value="0" /></td>
+                </tr>
+                <tr id="trNettProfitNew">
+                    <td height="30" align="right">
+                        NETT PROFIT:
+                    </td>
+                    <td><input type="text" id="NettProfitNew" readonly="readonly" style="text-align:right;background-color:silver" value="0" /></td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center"><br>
+                        <fieldset>
+                            <legend>Is the property now being sold owned by:</legend>
+                            <label for="radio-1">a natural person/s </label>
+                            <input type="radio" name="radio-1" id="radio-1" value="natPerson" checked="checked">
+                            <label for="radio-2">a Close Corporation</label>
+                            <input type="radio" name="radio-1" id="radio-2" value="closeCorporation">
+                            <label for="radio-3">a Company </label>
+                            <input type="radio" name="radio-1" id="radio-3" value="company">
+                            <label for="radio-4">a Trust  </label>
+                            <input type="radio" name="radio-1" id="radio-4" value="trust">
+                        </fieldset>
+
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div id="Primaryresidence"><br>
+            <table style="width:100%">
+                <tr>
+                    <td style="width:60%" align="right">
+                        Is the property your primary residence? (your home)
+                    </td>
+                    <td>
+                        <input type="checkbox" name="chkPrimaryResidence" id="chkPrimaryResidence">
+
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right">
+                        Have you ulitised your ANNUAL CAPITAL GAINS EXCLUSION of R40 000
+                    </td>
+                    <td>
+                        <input type="checkbox" name="chkAnnualCapitalGains" id="chkAnnualCapitalGains" checked="checked">
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right">
+                        How Many Natural Persons Own the Property:
+                    </td>
+                    <td>
+                        <input type="text" id="noOwners" value="1" />
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center"><br>
+                        <fieldset>
+                            <legend>Select your income tax bracket:</legend>
+                            <label for="taxBracket1">R 0 – R 195 850 (18%)</label>
+                            <input type="radio" name="taxBracket" id="taxBracket1" value="taxBracket1" checked="checked">
+                            <label for="taxBracket2">R 195 851 – R 305 850 (26%)</label>
+                            <input type="radio" name="taxBracket" id="taxBracket2" value="taxBracket2">
+                            <label for="taxBracket3">R 305 850	 - R 423 300 (31%)</label>
+                            <input type="radio" name="taxBracket" id="taxBracket3" value="taxBracket3">
+                            <label for="taxBracket4">R 423 300 – R 555 600 (36%)</label>
+                            <input type="radio" name="taxBracket" id="taxBracket4" value="taxBracket4">
+                            <label for="taxBracket5">R555 600 – R708 310 (39%)</label>
+                            <input type="radio" name="taxBracket" id="taxBracket5" value="taxBracket5">
+                            <label for="taxBracket6">R 708 310– R1 500 001 (41%)</label>
+                            <input type="radio" name="taxBracket" id="taxBracket6" value="taxBracket6">
+                            <label for="taxBracket7">R1 500 001 and upwards (45%)</label>
+                            <input type="radio" name="taxBracket" id="taxBracket7" value="taxBracket7">
+                        </fieldset>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <br>
+        <div id="NETT_PROFIT">
+            <table style="width:100%">
+                <tr>
+                    <td height="30" align="right" style="width:60%"> Capital Gains Taxable PROFIT:</td>
+                    <td><input type="text" id="CGTProfit" value="0" readonly="readonly" style="text-align:right;background-color:silver" /></td>
+                </tr>
+                <tr>
+                    <td height="30" align="right" style="width:60%"><label id="lblPercCGT">40% of the Capital Gains Taxable Profit:</label> </td>
+                    <td><input type="text" id="CGTProfitPerc" value="0" readonly="readonly" style="text-align:right;background-color:silver" /></td>
+                </tr>
+                <tr>
+                    <td height="30" align="right" style="width:60%"> <label id="lblCGTPayable"> Your CGT payable :</label></td>
+                    <td><input type="text" id="CGTPayable" value="0" readonly="readonly" style="text-align:right;background-color:silver" /></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div id="terms">
+      <table align="center" style="width:75%">
+        <tr>
+          <td colspan="2"><br />
+            <br /></td>
+        </tr>
+        <tr>
+          <td colspan="2" align="justify"><p>This calculator relies on user input and Faurie Nell Incorporated cannot take responsibility for any errors or omissions in this regard. This calculator is intended to provide a general guide on the capital gains tax applicable to the sale of your immovable property only and is not intended as advice in respect of your total annual tax return and total annual capital gains tax liability which annual return will include information beyond the knowledge of Faurie Nell Incorporated. In the final instance please seek advice from a tax specialist advisor. </p>
+            <p>&nbsp;</p></td>
+        </tr>
+        <tr>
+          <td width="64%" align="right" style="width:60%"><strong>ACCEPT TERMS: &nbsp; </strong></td>
+          <td width="36%"><p>
+            <input type="checkbox" name="chkAcceptTerrms" id="chkAcceptTerrms">
+          </p></td>
+        </tr>
+        <tr>
+          <td align="right" style="width:60%">&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+      </table>
+    </div>
+</body>
+</html>

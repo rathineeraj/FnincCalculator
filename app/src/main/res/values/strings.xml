@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Faurie Nell Inc</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="crash_dialog_title">Crash Report</string>
+    <string name="crash_message">Send Crash report to developer</string>
+    <string name="crash_report_comments">Say something about this Crash please</string>
+
+    <string name="cost_calculator">Transfer and Bond Costs Calculator</string>
+    <string name="login_account">Login / Create Account</string>
+    <string name="contact_us">Contact Us</string>
+    <string name="calender">Due Date Calculator</string>
+    <string name="find_date">Find Date</string>
+    <string name="feedback">Feedback</string>
+    <string name="capital_gains">Capital Gains Tax Calculator</string>
+
+</resources>

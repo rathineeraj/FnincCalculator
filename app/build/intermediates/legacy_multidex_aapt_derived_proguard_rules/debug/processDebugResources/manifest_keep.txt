@@ -1,0 +1,4 @@
+# Referenced at D:\AndroidStudioProjects\FnincCalculator\app\build\intermediates\merged_manifests\debug\AndroidManifest.xml:14
+-keep class android.support.v4.app.CoreComponentFactory { <init>(); }
+# Referenced at D:\AndroidStudioProjects\FnincCalculator\app\build\intermediates\merged_manifests\debug\AndroidManifest.xml:14
+-keep class com.fnincnellinc.fninccalculator.ApplicationController { <init>(); }

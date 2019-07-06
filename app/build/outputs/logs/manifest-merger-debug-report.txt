@@ -1,0 +1,230 @@
+-- Merging decision tree log ---
+manifest
+ADDED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml:2:1-62:12
+INJECTED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml:2:1-62:12
+INJECTED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml:2:1-62:12
+INJECTED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml:2:1-62:12
+MERGED from [com.android.support:multidex:1.0.3] C:\Users\Neeraj\.gradle\caches\transforms-2\files-2.1\bdf754c72518098472e97537e8dca973\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\Neeraj\.gradle\caches\transforms-2\files-2.1\58ea71ed3535c789d07a06ba4a908300\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\Neeraj\.gradle\caches\transforms-2\files-2.1\48cdc300c30a077c8fbb6f9d992b753d\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\Neeraj\.gradle\caches\transforms-2\files-2.1\efca7a0e0f5d85ce0557515b5e47f011\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\Neeraj\.gradle\caches\transforms-2\files-2.1\c1b5e5be3e7442d67f344a1c18906c3d\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\Neeraj\.gradle\caches\transforms-2\files-2.1\e464d4c8a177c0944d35f871d4ea2de4\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\Neeraj\.gradle\caches\transforms-2\files-2.1\110d6816648b7135b6b4aea19320e7db\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:loader:28.0.0] C:\Users\Neeraj\.gradle\caches\transforms-2\files-2.1\039b978f6e5df4bf9d0d1fa3d43e68e4\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:viewpager:28.0.0] C:\Users\Neeraj\.gradle\caches\transforms-2\files-2.1\f24d8db5b70c900ae02c624d2c6aca11\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\Neeraj\.gradle\caches\transforms-2\files-2.1\c7e399f13b0e34d186d16f2f41e77d23\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\Neeraj\.gradle\caches\transforms-2\files-2.1\bf81fa672f98fda429fce3fdc8b73320\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\Neeraj\.gradle\caches\transforms-2\files-2.1\08c8605ef3bea48faebb17337d0bcef4\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:customview:28.0.0] C:\Users\Neeraj\.gradle\caches\transforms-2\files-2.1\952cdb31bc64d19cba2ddbd0a3003f72\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\Neeraj\.gradle\caches\transforms-2\files-2.1\e87dd8eb67a5d861a59135a86d549f35\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\Neeraj\.gradle\caches\transforms-2\files-2.1\998bd0aab21fae95e631579548169491\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\Neeraj\.gradle\caches\transforms-2\files-2.1\c4f738f55643002cf3b259ff1cdcf4ab\AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\Neeraj\.gradle\caches\transforms-2\files-2.1\bc51856f784726358cf9231abd58ac92\AndroidManifest.xml:17:1-25:12
+MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\Neeraj\.gradle\caches\transforms-2\files-2.1\f4e30249545bc618ee04e694f54ef569\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\Neeraj\.gradle\caches\transforms-2\files-2.1\38472da171471deb8d8d82da6cd3b3b0\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:documentfile:28.0.0] C:\Users\Neeraj\.gradle\caches\transforms-2\files-2.1\73aeb79ccd1be2e243c33653f7545aff\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\Neeraj\.gradle\caches\transforms-2\files-2.1\496a6a88bb1224b8a0d602326b11cc61\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:print:28.0.0] C:\Users\Neeraj\.gradle\caches\transforms-2\files-2.1\c4edc89d708dba520f39d445e16def54\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\Neeraj\.gradle\caches\transforms-2\files-2.1\b61ef72e95c3e98a3c41fe9bda33f2b4\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\Neeraj\.gradle\caches\transforms-2\files-2.1\4be7a2e2f50d3f99752108e248d9a63b\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\Neeraj\.gradle\caches\transforms-2\files-2.1\bb92ad830cf5ac46a9f9d39791e79d2c\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.1] C:\Users\Neeraj\.gradle\caches\transforms-2\files-2.1\fba447f424c373f108b99d8ceb9a544b\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:interpolator:28.0.0] C:\Users\Neeraj\.gradle\caches\transforms-2\files-2.1\7549f734a3a2d21dbf3f593e979940ed\AndroidManifest.xml:17:1-22:12
+INJECTED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml:2:1-62:12
+INJECTED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml:2:1-62:12
+INJECTED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml:2:1-62:12
+	package
+		ADDED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml:3:5-47
+		INJECTED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml
+		INJECTED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml
+		ADDED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml:2:1-62:12
+		INJECTED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml
+	android:versionCode
+		INJECTED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml
+		ADDED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml:2:1-62:12
+		INJECTED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml:2:11-69
+uses-permission#android.permission.READ_LOGS
+ADDED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml:6:5-68
+	android:name
+		ADDED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml:6:22-65
+uses-permission#android.permission.INTERNET
+ADDED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml:7:5-67
+	android:name
+		ADDED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml:7:22-64
+application
+ADDED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml:9:5-60:19
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\Neeraj\.gradle\caches\transforms-2\files-2.1\c4f738f55643002cf3b259ff1cdcf4ab\AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\Neeraj\.gradle\caches\transforms-2\files-2.1\c4f738f55643002cf3b259ff1cdcf4ab\AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\Neeraj\.gradle\caches\transforms-2\files-2.1\bc51856f784726358cf9231abd58ac92\AndroidManifest.xml:22:5-23:19
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\Neeraj\.gradle\caches\transforms-2\files-2.1\bc51856f784726358cf9231abd58ac92\AndroidManifest.xml:22:5-23:19
+	android:appComponentFactory
+		ADDED from [com.android.support:support-compat:28.0.0] C:\Users\Neeraj\.gradle\caches\transforms-2\files-2.1\c4f738f55643002cf3b259ff1cdcf4ab\AndroidManifest.xml:22:18-91
+	android:label
+		ADDED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml:13:9-41
+	android:icon
+		ADDED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml:12:9-39
+	android:allowBackup
+		ADDED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml:11:9-35
+	android:theme
+		ADDED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml:14:9-40
+	android:name
+		ADDED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml:10:9-78
+activity#com.fnincnellinc.fninccalculator.SplashScreen
+ADDED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml:15:9-24:20
+	android:screenOrientation
+		ADDED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml:18:13-49
+	android:label
+		ADDED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml:17:13-45
+	android:name
+		ADDED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml:16:13-41
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml:19:13-23:29
+action#android.intent.action.MAIN
+ADDED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml:20:17-69
+	android:name
+		ADDED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml:20:25-66
+category#android.intent.category.LAUNCHER
+ADDED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml:22:17-77
+	android:name
+		ADDED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml:22:27-74
+activity#com.fnincnellinc.fninccalculator.MainActivity
+ADDED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml:26:9-29:55
+	android:screenOrientation
+		ADDED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml:28:13-49
+	android:windowSoftInputMode
+		ADDED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml:29:13-52
+	android:name
+		ADDED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml:27:13-41
+activity#com.fnincnellinc.fninccalculator.HomeActivity
+ADDED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml:30:9-33:55
+	android:screenOrientation
+		ADDED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml:32:13-49
+	android:windowSoftInputMode
+		ADDED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml:33:13-52
+	android:name
+		ADDED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml:31:13-41
+activity#com.fnincnellinc.fninccalculator.WebActivity
+ADDED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml:34:9-37:55
+	android:screenOrientation
+		ADDED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml:36:13-49
+	android:windowSoftInputMode
+		ADDED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml:37:13-52
+	android:name
+		ADDED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml:35:13-40
+activity#com.fnincnellinc.fninccalculator.ContactUsActivity
+ADDED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml:38:9-41:55
+	android:screenOrientation
+		ADDED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml:40:13-49
+	android:windowSoftInputMode
+		ADDED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml:41:13-52
+	android:name
+		ADDED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml:39:13-46
+activity#com.fnincnellinc.fninccalculator.CalenderActivity
+ADDED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml:42:9-45:55
+	android:screenOrientation
+		ADDED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml:44:13-49
+	android:windowSoftInputMode
+		ADDED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml:45:13-52
+	android:name
+		ADDED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml:43:13-45
+activity#com.fnincnellinc.fninccalculator.FeedbackActivity
+ADDED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml:46:9-49:55
+	android:screenOrientation
+		ADDED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml:48:13-49
+	android:windowSoftInputMode
+		ADDED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml:49:13-52
+	android:name
+		ADDED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml:47:13-45
+activity#org.acra.CrashReportDialog
+ADDED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml:50:9-55:59
+	android:excludeFromRecents
+		ADDED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml:52:13-46
+	android:launchMode
+		ADDED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml:54:13-48
+	android:theme
+		ADDED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml:55:13-56
+	android:finishOnTaskLaunch
+		ADDED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml:53:13-46
+	android:name
+		ADDED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml:51:13-54
+activity#com.fnincnellinc.fninccalculator.CapitalGainActivity
+ADDED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml:56:9-59:55
+	android:screenOrientation
+		ADDED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml:58:13-49
+	android:windowSoftInputMode
+		ADDED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml:59:13-52
+	android:name
+		ADDED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml:57:13-48
+uses-sdk
+INJECTED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml
+INJECTED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml
+MERGED from [com.android.support:multidex:1.0.3] C:\Users\Neeraj\.gradle\caches\transforms-2\files-2.1\bdf754c72518098472e97537e8dca973\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:multidex:1.0.3] C:\Users\Neeraj\.gradle\caches\transforms-2\files-2.1\bdf754c72518098472e97537e8dca973\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\Neeraj\.gradle\caches\transforms-2\files-2.1\58ea71ed3535c789d07a06ba4a908300\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\Neeraj\.gradle\caches\transforms-2\files-2.1\58ea71ed3535c789d07a06ba4a908300\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\Neeraj\.gradle\caches\transforms-2\files-2.1\48cdc300c30a077c8fbb6f9d992b753d\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\Neeraj\.gradle\caches\transforms-2\files-2.1\48cdc300c30a077c8fbb6f9d992b753d\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\Neeraj\.gradle\caches\transforms-2\files-2.1\efca7a0e0f5d85ce0557515b5e47f011\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\Neeraj\.gradle\caches\transforms-2\files-2.1\efca7a0e0f5d85ce0557515b5e47f011\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\Neeraj\.gradle\caches\transforms-2\files-2.1\c1b5e5be3e7442d67f344a1c18906c3d\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\Neeraj\.gradle\caches\transforms-2\files-2.1\c1b5e5be3e7442d67f344a1c18906c3d\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\Neeraj\.gradle\caches\transforms-2\files-2.1\e464d4c8a177c0944d35f871d4ea2de4\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\Neeraj\.gradle\caches\transforms-2\files-2.1\e464d4c8a177c0944d35f871d4ea2de4\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\Neeraj\.gradle\caches\transforms-2\files-2.1\110d6816648b7135b6b4aea19320e7db\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\Neeraj\.gradle\caches\transforms-2\files-2.1\110d6816648b7135b6b4aea19320e7db\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] C:\Users\Neeraj\.gradle\caches\transforms-2\files-2.1\039b978f6e5df4bf9d0d1fa3d43e68e4\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] C:\Users\Neeraj\.gradle\caches\transforms-2\files-2.1\039b978f6e5df4bf9d0d1fa3d43e68e4\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] C:\Users\Neeraj\.gradle\caches\transforms-2\files-2.1\f24d8db5b70c900ae02c624d2c6aca11\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] C:\Users\Neeraj\.gradle\caches\transforms-2\files-2.1\f24d8db5b70c900ae02c624d2c6aca11\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\Neeraj\.gradle\caches\transforms-2\files-2.1\c7e399f13b0e34d186d16f2f41e77d23\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\Neeraj\.gradle\caches\transforms-2\files-2.1\c7e399f13b0e34d186d16f2f41e77d23\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\Neeraj\.gradle\caches\transforms-2\files-2.1\bf81fa672f98fda429fce3fdc8b73320\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\Neeraj\.gradle\caches\transforms-2\files-2.1\bf81fa672f98fda429fce3fdc8b73320\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\Neeraj\.gradle\caches\transforms-2\files-2.1\08c8605ef3bea48faebb17337d0bcef4\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\Neeraj\.gradle\caches\transforms-2\files-2.1\08c8605ef3bea48faebb17337d0bcef4\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] C:\Users\Neeraj\.gradle\caches\transforms-2\files-2.1\952cdb31bc64d19cba2ddbd0a3003f72\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] C:\Users\Neeraj\.gradle\caches\transforms-2\files-2.1\952cdb31bc64d19cba2ddbd0a3003f72\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\Neeraj\.gradle\caches\transforms-2\files-2.1\e87dd8eb67a5d861a59135a86d549f35\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\Neeraj\.gradle\caches\transforms-2\files-2.1\e87dd8eb67a5d861a59135a86d549f35\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\Neeraj\.gradle\caches\transforms-2\files-2.1\998bd0aab21fae95e631579548169491\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\Neeraj\.gradle\caches\transforms-2\files-2.1\998bd0aab21fae95e631579548169491\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\Neeraj\.gradle\caches\transforms-2\files-2.1\c4f738f55643002cf3b259ff1cdcf4ab\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\Neeraj\.gradle\caches\transforms-2\files-2.1\c4f738f55643002cf3b259ff1cdcf4ab\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\Neeraj\.gradle\caches\transforms-2\files-2.1\bc51856f784726358cf9231abd58ac92\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\Neeraj\.gradle\caches\transforms-2\files-2.1\bc51856f784726358cf9231abd58ac92\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\Neeraj\.gradle\caches\transforms-2\files-2.1\f4e30249545bc618ee04e694f54ef569\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\Neeraj\.gradle\caches\transforms-2\files-2.1\f4e30249545bc618ee04e694f54ef569\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\Neeraj\.gradle\caches\transforms-2\files-2.1\38472da171471deb8d8d82da6cd3b3b0\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\Neeraj\.gradle\caches\transforms-2\files-2.1\38472da171471deb8d8d82da6cd3b3b0\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] C:\Users\Neeraj\.gradle\caches\transforms-2\files-2.1\73aeb79ccd1be2e243c33653f7545aff\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] C:\Users\Neeraj\.gradle\caches\transforms-2\files-2.1\73aeb79ccd1be2e243c33653f7545aff\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\Neeraj\.gradle\caches\transforms-2\files-2.1\496a6a88bb1224b8a0d602326b11cc61\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\Neeraj\.gradle\caches\transforms-2\files-2.1\496a6a88bb1224b8a0d602326b11cc61\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] C:\Users\Neeraj\.gradle\caches\transforms-2\files-2.1\c4edc89d708dba520f39d445e16def54\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] C:\Users\Neeraj\.gradle\caches\transforms-2\files-2.1\c4edc89d708dba520f39d445e16def54\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\Neeraj\.gradle\caches\transforms-2\files-2.1\b61ef72e95c3e98a3c41fe9bda33f2b4\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\Neeraj\.gradle\caches\transforms-2\files-2.1\b61ef72e95c3e98a3c41fe9bda33f2b4\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\Neeraj\.gradle\caches\transforms-2\files-2.1\4be7a2e2f50d3f99752108e248d9a63b\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\Neeraj\.gradle\caches\transforms-2\files-2.1\4be7a2e2f50d3f99752108e248d9a63b\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\Neeraj\.gradle\caches\transforms-2\files-2.1\bb92ad830cf5ac46a9f9d39791e79d2c\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\Neeraj\.gradle\caches\transforms-2\files-2.1\bb92ad830cf5ac46a9f9d39791e79d2c\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] C:\Users\Neeraj\.gradle\caches\transforms-2\files-2.1\fba447f424c373f108b99d8ceb9a544b\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] C:\Users\Neeraj\.gradle\caches\transforms-2\files-2.1\fba447f424c373f108b99d8ceb9a544b\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] C:\Users\Neeraj\.gradle\caches\transforms-2\files-2.1\7549f734a3a2d21dbf3f593e979940ed\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] C:\Users\Neeraj\.gradle\caches\transforms-2\files-2.1\7549f734a3a2d21dbf3f593e979940ed\AndroidManifest.xml:20:5-44
+INJECTED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml
+INJECTED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml
+		ADDED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml
+		INJECTED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml
+		ADDED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml
+		INJECTED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml

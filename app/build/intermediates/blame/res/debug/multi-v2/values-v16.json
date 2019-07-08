@@ -4,17 +4,7 @@
             "outputFile": "D:\\AndroidStudioProjects\\FnincCalculator\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v16\\values-v16.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Neeraj\\.gradle\\caches\\transforms-2\\files-2.1\\40319683f4fa470db5ecb1d2b1f05284\\res\\values-v16\\values-v16.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "65",
-                        "endOffsets": "116"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\Neeraj\\.gradle\\caches\\transforms-2\\files-2.1\\53b7ef0e27d1dae32e16199def0d05fa\\res\\values-v16\\values-v16.xml",
+                    "source": "C:\\Users\\Neeraj\\.gradle\\caches\\transforms-2\\files-2.1\\58ea71ed3535c789d07a06ba4a908300\\res\\values-v16\\values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -30,6 +20,16 @@
                         "endLines": "6",
                         "endColumns": "12",
                         "endOffsets": "289"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Neeraj\\.gradle\\caches\\transforms-2\\files-2.1\\c4f738f55643002cf3b259ff1cdcf4ab\\res\\values-v16\\values-v16.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "65",
+                        "endOffsets": "116"
                     }
                 }
             ]

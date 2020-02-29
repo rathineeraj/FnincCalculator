@@ -1,6 +1,5 @@
 package com.fnincnellinc.fninccalculator;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.InputType;
@@ -85,10 +84,10 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
             df.setDecimalSeparatorAlwaysShown(true);
             dfnd = new DecimalFormat("#,###");
             hasFractionalPart = false;
-            mEmail = (Button) findViewById(R.id.btnEmail);
+            mEmail = findViewById(R.id.btnEmail);
             mEmail.setOnClickListener(this);
-            mCalTransferFees = (Button) findViewById(R.id.btnCalTransFees);
-            mPurchasePrice = (EditText) findViewById(R.id.etPurchasePrice);
+            mCalTransferFees = findViewById(R.id.btnCalTransFees);
+            mPurchasePrice = findViewById(R.id.etPurchasePrice);
             mPurchasePrice.setInputType(InputType.TYPE_CLASS_NUMBER);
             mCalTransferFees.setOnClickListener(this);
             /*
@@ -133,8 +132,8 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
              *
              * } });
              */
-            mCalBondCost = (Button) findViewById(R.id.btnCalBondCost);
-            mBondCost = (EditText) findViewById(R.id.etBondAmt);
+            mCalBondCost = findViewById(R.id.btnCalBondCost);
+            mBondCost = findViewById(R.id.etBondAmt);
             mBondCost.setInputType(InputType.TYPE_CLASS_NUMBER);
             mCalBondCost.setOnClickListener(this);
 
@@ -179,43 +178,43 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
              * } });
              */
 
-            mTotalTransferCost = (TextView) findViewById(R.id.tvTotalTransferCost);
-            mTotalBondCost = (TextView) findViewById(R.id.tvTotalBondCost);
-            mTotalAllCost = (TextView) findViewById(R.id.tvTotalCost);
+            mTotalTransferCost = findViewById(R.id.tvTotalTransferCost);
+            mTotalBondCost = findViewById(R.id.tvTotalBondCost);
+            mTotalAllCost = findViewById(R.id.tvTotalCost);
 
             // Transfer Cost Textviews
-            Trans_PurchasePrice = (TextView) findViewById(R.id.tvPurchasePrice);
-            Trans_TransferDuty = (TextView) findViewById(R.id.tvtransferDuty);
-            Trans_DeedOffice = (TextView) findViewById(R.id.tvExam);
-            Trans_Fica = (TextView) findViewById(R.id.tvFicaFee);
-            Trans_Conveyancer = (TextView) findViewById(R.id.tvTraiffFee);
-            Trans_Petties = (TextView) findViewById(R.id.tvPettiesSundry);
-            Trans_DeedSearchFee = (TextView) findViewById(R.id.tvDeedsSearchFee);
-            Trans_Ele = (TextView) findViewById(R.id.tvEleDocFee);
-            Trans_Rates = (TextView) findViewById(R.id.tvRatesCleCost);
-            Trans_Vat = (TextView) findViewById(R.id.tvVatTraiffFee);
-            Trans_Total = (TextView) findViewById(R.id.tvTotalTrans);
+            Trans_PurchasePrice = findViewById(R.id.tvPurchasePrice);
+            Trans_TransferDuty = findViewById(R.id.tvtransferDuty);
+            Trans_DeedOffice = findViewById(R.id.tvExam);
+            Trans_Fica = findViewById(R.id.tvFicaFee);
+            Trans_Conveyancer = findViewById(R.id.tvTraiffFee);
+            Trans_Petties = findViewById(R.id.tvPettiesSundry);
+            Trans_DeedSearchFee = findViewById(R.id.tvDeedsSearchFee);
+            Trans_Ele = findViewById(R.id.tvEleDocFee);
+            Trans_Rates = findViewById(R.id.tvRatesCleCost);
+            Trans_Vat = findViewById(R.id.tvVatTraiffFee);
+            Trans_Total = findViewById(R.id.tvTotalTrans);
             // Bond TextViews
-            Bond_Amount = (TextView) findViewById(R.id.tvBondAmount);
-            Bond_DeedOffice = (TextView) findViewById(R.id.tvExamBond);
-            Bond_Conveyancer = (TextView) findViewById(R.id.tvConveyancerBond);
-            Bond_DeedSearchFee = (TextView) findViewById(R.id.tvDeedsSearchFeeBond);
-            Bond_Petties = (TextView) findViewById(R.id.tvPettiesSundryBond);
-            Bond_Fica = (TextView) findViewById(R.id.tvFicaFeeBond);
-            Bond_Ele = (TextView) findViewById(R.id.tvEleDocFeeBond);
-            Bond_Vat = (TextView) findViewById(R.id.tvVatBond);
-            Bond_Total = (TextView) findViewById(R.id.tvBondTotal);
+            Bond_Amount = findViewById(R.id.tvBondAmount);
+            Bond_DeedOffice = findViewById(R.id.tvExamBond);
+            Bond_Conveyancer = findViewById(R.id.tvConveyancerBond);
+            Bond_DeedSearchFee = findViewById(R.id.tvDeedsSearchFeeBond);
+            Bond_Petties = findViewById(R.id.tvPettiesSundryBond);
+            Bond_Fica = findViewById(R.id.tvFicaFeeBond);
+            Bond_Ele = findViewById(R.id.tvEleDocFeeBond);
+            Bond_Vat = findViewById(R.id.tvVatBond);
+            Bond_Total = findViewById(R.id.tvBondTotal);
 
             // Bond Calculator
-            mBondAmtCal = (EditText) findViewById(R.id.etBondCalAmt);
+            mBondAmtCal = findViewById(R.id.etBondCalAmt);
             mBondAmtCal.setInputType(InputType.TYPE_CLASS_NUMBER);
-            mInterestRate = (EditText) findViewById(R.id.etInterestRate);
+            mInterestRate = findViewById(R.id.etInterestRate);
             mInterestRate.setKeyListener(DigitsKeyListener
                     .getInstance("0123456789."));
             mInterestRate.setInputType(InputType.TYPE_NUMBER_FLAG_DECIMAL);
-            mRepaymentPeriod = (EditText) findViewById(R.id.etRepaymentPeriod);
+            mRepaymentPeriod = findViewById(R.id.etRepaymentPeriod);
             mRepaymentPeriod.setInputType(InputType.TYPE_CLASS_NUMBER);
-            mMonthlyInstallment = (TextView) findViewById(R.id.tvMonthly);
+            mMonthlyInstallment = findViewById(R.id.tvMonthly);
             /*
              * mBondAmtCal.addTextChangedListener(new TextWatcher() {
              *
@@ -259,15 +258,15 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
              * } });
              */
 
-            mCalMonthlyInstallment = (Button) findViewById(R.id.btnInstallmentCal);
+            mCalMonthlyInstallment = findViewById(R.id.btnInstallmentCal);
             mCalMonthlyInstallment.setOnClickListener(this);
             mInterestRate.setText("10.25");
             mRepaymentPeriod.setText("20");
 
             // Calculate All
-            mCalculateAll = (Button) findViewById(R.id.btnTotal);
+            mCalculateAll = findViewById(R.id.btnTotal);
             mCalculateAll.setOnClickListener(this);
-            mDeposit = (EditText) findViewById(R.id.etDeposit);
+            mDeposit = findViewById(R.id.etDeposit);
             mDeposit.setInputType(InputType.TYPE_CLASS_NUMBER);
             /*
              * mDeposit.addTextChangedListener(new TextWatcher() {
@@ -308,10 +307,10 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
              *
              * } });
              */
-            mReset = (Button) findViewById(R.id.btnReset);
+            mReset = findViewById(R.id.btnReset);
             mReset.setOnClickListener(this);
 
-            mVat = (RadioGroup) findViewById(R.id.rdgVat);
+            mVat = findViewById(R.id.rdgVat);
             mVat.setOnCheckedChangeListener(new OnCheckedChangeListener() {
 
                 @Override
@@ -729,7 +728,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
             // seller is a vat vendor
             return (0);
         } else if (VatVendor == 0) { // seller is a natural person
-            double x = 0;
+            double x;
             if (Amt <= 1000000) {
                 txfd = 0;
             } else if ((Amt > 1000000) && (Amt <= 1375000)) {

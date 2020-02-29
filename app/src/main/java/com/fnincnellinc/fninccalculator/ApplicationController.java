@@ -1,12 +1,12 @@
 package com.fnincnellinc.fninccalculator;
 
+import android.app.Application;
+
 import org.acra.ACRA;
 import org.acra.ReportField;
 import org.acra.ReportingInteractionMode;
 import org.acra.annotation.ReportsCrashes;
 import org.acra.sender.HttpSender;
-
-import android.app.Application;
 
 @ReportsCrashes(
         reportType = HttpSender.Type.FORM,

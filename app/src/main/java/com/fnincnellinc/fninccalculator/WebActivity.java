@@ -1,15 +1,15 @@
 package com.fnincnellinc.fninccalculator;
 
-import android.app.Activity;
 import android.graphics.Bitmap;
 import android.os.Bundle;
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
-
+import android.view.View;
 import android.webkit.WebChromeClient;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.ProgressBar;
+
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 
 /**
  * Created by Neeraj on 01-03-2018.
@@ -25,8 +25,8 @@ public class WebActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_web);
-        browser = (WebView) findViewById(R.id.webView);
-        mProgressBar = (ProgressBar) findViewById(R.id.progressBar);
+        browser = findViewById(R.id.webView);
+        mProgressBar = findViewById(R.id.progressBar);
 
         // Enable javascript
         browser.getSettings().setJavaScriptEnabled(true);
@@ -53,7 +53,7 @@ public class WebActivity extends AppCompatActivity {
         @Override
         public void onPageFinished(WebView view, String url) {
             super.onPageFinished(view, url);
-            mProgressBar.setVisibility(view.GONE);
+            mProgressBar.setVisibility(View.GONE);
 
 
         }

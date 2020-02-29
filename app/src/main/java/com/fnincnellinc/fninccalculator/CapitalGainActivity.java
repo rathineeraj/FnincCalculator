@@ -1,6 +1,5 @@
 package com.fnincnellinc.fninccalculator;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
@@ -17,7 +16,7 @@ public class CapitalGainActivity extends AppCompatActivity {
 
         // Get the widgets reference from XML layout
 
-        final WebView wv = (WebView) findViewById(R.id.webView);
+        final WebView wv = findViewById(R.id.webView);
 
         // Set a click listener for Button widget
 

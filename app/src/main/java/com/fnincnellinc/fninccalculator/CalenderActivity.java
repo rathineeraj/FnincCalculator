@@ -1,11 +1,7 @@
 package com.fnincnellinc.fninccalculator;
 
-import android.app.Activity;
 import android.app.DatePickerDialog;
 import android.os.Bundle;
-
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
@@ -13,6 +9,8 @@ import android.widget.CheckBox;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -33,13 +31,13 @@ public class CalenderActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calender);
 
-        etDate = (EditText) findViewById(R.id.etDate);
-        etDays = (EditText) findViewById(R.id.etDays);
+        etDate = findViewById(R.id.etDate);
+        etDays = findViewById(R.id.etDays);
         etDays.setText("45");
-        chk = (CheckBox) findViewById(R.id.chk);
-        chkHolidays = (CheckBox) findViewById(R.id.chkHolidays);
-        tvFutureDate = (TextView) findViewById(R.id.tvFutureDate);
-        btnFindDate = (Button) findViewById(R.id.btnFindDate);
+        chk = findViewById(R.id.chk);
+        chkHolidays = findViewById(R.id.chkHolidays);
+        tvFutureDate = findViewById(R.id.tvFutureDate);
+        btnFindDate = findViewById(R.id.btnFindDate);
         btnFindDate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -66,7 +64,7 @@ public class CalenderActivity extends AppCompatActivity {
                         } while (!isWorkingDay(cal));
 
 
-                    tvFutureDate.setText("Date is : " + sdf.format(cal.getTime()));
+                    tvFutureDate.setText(String.format("Date is : %s", sdf.format(cal.getTime())));
                 } else if (chkHolidays.isChecked() && !chk.isChecked()) {
                     String dt = etDate.getText().toString();  // Start date
                     int Days = Integer.parseInt(etDays.getText().toString());
@@ -86,7 +84,7 @@ public class CalenderActivity extends AppCompatActivity {
                         } while (!isHolidaysDay(cal));
 
 
-                    tvFutureDate.setText("Date is : " + sdf.format(cal.getTime()));
+                    tvFutureDate.setText(String.format("Date is : %s", sdf.format(cal.getTime())));
                 } else if (chk.isChecked() && chkHolidays.isChecked()) {
                     String dt = etDate.getText().toString();  // Start date
                     int Days = Integer.parseInt(etDays.getText().toString());
@@ -106,7 +104,7 @@ public class CalenderActivity extends AppCompatActivity {
                         } while (!isHolidaysDayAndWorkingDay(cal));
 
 
-                    tvFutureDate.setText("Date is : " + sdf.format(cal.getTime()));
+                    tvFutureDate.setText(String.format("Date is : %s", sdf.format(cal.getTime())));
 
                 } else {
                     String dt = etDate.getText().toString();  // Start date
@@ -121,7 +119,7 @@ public class CalenderActivity extends AppCompatActivity {
                     c.add(Calendar.DATE, Days);
 
                     String output = sdf.format(c.getTime());
-                    tvFutureDate.setText("Date is : " + output);
+                    tvFutureDate.setText(String.format("Date is : %s", output));
                 }
 
             }
@@ -141,7 +139,7 @@ public class CalenderActivity extends AppCompatActivity {
             @Override
             public void onDateSet(DatePicker view, int year, int monthOfYear,
                                   int dayOfMonth) {
-                // TODO Auto-generated method stub
+
                 myCalendar.set(Calendar.YEAR, year);
                 myCalendar.set(Calendar.MONTH, monthOfYear);
                 myCalendar.set(Calendar.DAY_OF_MONTH, dayOfMonth);
@@ -156,7 +154,7 @@ public class CalenderActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                // TODO Auto-generated method stub
+
                 new DatePickerDialog(CalenderActivity.this, date, myCalendar
                         .get(Calendar.YEAR), myCalendar.get(Calendar.MONTH),
                         myCalendar.get(Calendar.DAY_OF_MONTH)).show();
@@ -168,11 +166,7 @@ public class CalenderActivity extends AppCompatActivity {
 
     private static boolean isWorkingDay(Calendar cal) {
         int dayOfWeek = cal.get(Calendar.DAY_OF_WEEK);
-        if (dayOfWeek == Calendar.SUNDAY || dayOfWeek == Calendar.SATURDAY)
-            return false;
-
-
-        return true;
+        return dayOfWeek != Calendar.SUNDAY && dayOfWeek != Calendar.SATURDAY;
     }
 
     private static boolean isHolidaysDay(Calendar cal) {
@@ -316,11 +310,7 @@ public class CalenderActivity extends AppCompatActivity {
             return false;
         } else if (year == 2025 && month == 9 && day == 24) {
             return false;
-        } else if (year == 2025 && month == 12 && (day == 16 || day == 25 || day == 26)) {
-            return false;
-        } else {
-            return true;
-        }
+        } else return year != 2025 || month != 12 || (day != 16 && day != 25 && day != 26);
 
 
     }

@@ -1,15 +1,11 @@
 package com.fnincnellinc.fninccalculator;
 
 import android.app.Activity;
-import android.graphics.Bitmap;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.webkit.WebChromeClient;
-import android.webkit.WebView;
-import android.webkit.WebViewClient;
-import android.widget.ProgressBar;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 
-public class ContactUsActivity extends Activity {
+public class ContactUsActivity extends AppCompatActivity {
 
 
 

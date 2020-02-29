@@ -4,7 +4,9 @@ import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.view.View;
 import android.view.Window;
 import android.widget.Button;
@@ -14,7 +16,7 @@ import android.widget.TextView;
  * Created by Neeraj on 01-03-2018.
  */
 
-public class HomeActivity extends Activity {
+public class HomeActivity extends AppCompatActivity {
 
     Button btnLogin, btnCalculator, btnContact, btnCalender, btnFeedback,btnCapitalGain;
 
@@ -34,7 +36,7 @@ public class HomeActivity extends Activity {
             @Override
             public void onClick(View view) {
 
-                Intent i = new Intent(HomeActivity.this, MainActivity.class);
+                Intent i = new Intent(HomeActivity.this, TermsActivity.class);
                 startActivity(i);
 
             }

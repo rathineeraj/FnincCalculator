@@ -4,7 +4,9 @@ import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
@@ -12,7 +14,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-public class FeedbackActivity extends Activity {
+public class FeedbackActivity extends AppCompatActivity {
 
     ImageView ivStar1, ivStar2, ivStar3, ivStar4, ivStar5;
     int Star1 = 0, Star2 = 0, Star3 = 0, Star4 = 0, Star5 = 0;

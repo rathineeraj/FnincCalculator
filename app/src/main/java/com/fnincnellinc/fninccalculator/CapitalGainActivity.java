@@ -5,7 +5,9 @@ import android.os.Bundle;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
-public class CapitalGainActivity extends Activity{
+import androidx.appcompat.app.AppCompatActivity;
+
+public class CapitalGainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

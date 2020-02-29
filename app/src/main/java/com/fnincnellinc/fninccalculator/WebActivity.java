@@ -3,7 +3,9 @@ package com.fnincnellinc.fninccalculator;
 import android.app.Activity;
 import android.graphics.Bitmap;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.webkit.WebChromeClient;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
@@ -13,7 +15,7 @@ import android.widget.ProgressBar;
  * Created by Neeraj on 01-03-2018.
  */
 
-public class WebActivity extends Activity {
+public class WebActivity extends AppCompatActivity {
 
     WebView browser;
     String URL = "https://www.ghosttracker.korbitec.com";

@@ -17,9 +17,11 @@ import android.widget.RadioGroup;
 import android.widget.RadioGroup.OnCheckedChangeListener;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import java.text.DecimalFormat;
 
-public class MainActivity extends Activity implements OnClickListener {
+public class MainActivity extends AppCompatActivity implements OnClickListener {
 
     private DecimalFormat df;
     private DecimalFormat dfnd;
@@ -571,7 +573,6 @@ public class MainActivity extends Activity implements OnClickListener {
                 TotalCost = 0;
                 Deposit = 0;
                 sTotalCost = "0";
-
                 break;
 
         }
@@ -721,7 +722,7 @@ public class MainActivity extends Activity implements OnClickListener {
 
     }
 
-    //31-05-2018
+    //31-05-2018 //28-02-2020
     public double getTransferDuty(double Amt) {
         double txfd = 0;
         if (VatVendor == 1) {
@@ -729,33 +730,33 @@ public class MainActivity extends Activity implements OnClickListener {
             return (0);
         } else if (VatVendor == 0) { // seller is a natural person
             double x = 0;
-            if (Amt <= 900000) {
+            if (Amt <= 1000000) {
                 txfd = 0;
-            } else if ((Amt > 900000) && (Amt <= 1250000)) {
-                x = (Amt - 900000) * (0.03);
+            } else if ((Amt > 1000000) && (Amt <= 1375000)) {
+                x = (Amt - 1000000) * (0.03);
                 txfd = x;
-                Log.e("txfd", "" + txfd);
-            } else if ((Amt > 1250000) && (Amt <= 1750000)) {
-                x = (350000) * (0.03);
-                x = x + (Amt - 1250000) * (0.06);
+
+            } else if ((Amt > 1375000) && (Amt <= 1925000)) {
+                x = (375000) * (0.03);
+                x = x + (Amt - 1375000) * (0.06);
                 txfd = x;
-            } else if ((Amt > 1750000) && (Amt <= 2250000)) {
-                x = (350000) * (0.03);
-                x = x + (500000) * (0.06);
-                x = x + (Amt - 1750000) * (0.08);
+            } else if ((Amt > 1925000) && (Amt <= 2475000)) {
+                x = (375000) * (0.03);
+                x = x + (550000) * (0.06);
+                x = x + (Amt - 1925000) * (0.08);
                 txfd = x;
-            } else if ((Amt > 2250000) && (Amt <= 10000000)) {
-                x = (350000) * (0.03);
-                x = x + (500000) * (0.06);
-                x = x + (500000) * (0.08);
-                x = x + (Amt - 2250000) * (0.11);
+            } else if ((Amt > 2475000) && (Amt <= 11000000)) {
+                x = (375000) * (0.03);
+                x = x + (550000) * (0.06);
+                x = x + (550000) * (0.08);
+                x = x + (Amt - 2475000) * (0.11);
                 txfd = x;
-            } else if (Amt > 10000000) {
-                x = (350000) * (0.03);
-                x = x + (500000) * (0.06);
-                x = x + (500000) * (0.08);
-                x = x + (7750000) * (0.11);
-                x = x + (Amt - 10000000) * (0.13);
+            } else if (Amt > 11000000) {
+                x = (375000) * (0.03);
+                x = x + (550000) * (0.06);
+                x = x + (550000) * (0.08);
+                x = x + (8525000) * (0.11);
+                x = x + (Amt - 11000000) * (0.13);
                 txfd = x;
             }
         }

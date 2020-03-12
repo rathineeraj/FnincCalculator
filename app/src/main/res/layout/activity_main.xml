@@ -119,6 +119,8 @@
                     android:layout_height="35dp"
                     android:layout_gravity="center_horizontal"
                     android:background="@drawable/bgbtn"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="@dimen/margin10"
                     android:text="Calculate Transfer Fees"
                     android:textColor="#c5c5c5"
                     android:textSize="14sp" />

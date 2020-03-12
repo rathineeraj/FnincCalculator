@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <title></title>
     <link href="scripts/cgt/jquery-ui.css" rel="stylesheet" />
+    <link rel="stylesheet" href="http://www.fninc.co.za/styles.css">
     <script src="scripts/cgt/jquery-3.3.1.js"></script>
     <script src="scripts/cgt/jquery-ui.js"></script>
 
@@ -40,8 +41,6 @@
          
 
             $("#trBaseCost").hide();
-            $("#trBaseCostNew").hide();
-            $("#trNettProfitNew").hide();
             $("#predate").hide();
             $('input:radio[name="radio-1"]').on("click", function () {
 
@@ -71,6 +70,7 @@
             $('input:checkbox[name="chkRecordsKept"]').on("click", noRecords);
 
             acceptTerms();
+            valuateDoc();
             noRecords();
         });
 
@@ -150,12 +150,23 @@
 
                     var date2 = new Date(2001, 9, 1);
                     if (date1 < date2) {                   
+                       //$("#trAdvertising").hide();
+                        //$("#trBondCosts").hide();
+                        //$("#trTransferCosts").hide();
+
+                        $("#predate").show();
+                        $("#lblOriginalPrice").text("Base costs:");
+                        $("#lblAdvertising").text("Less private advertising costs after 1 Oct 2001 (if any):");
+                        $("#lblImprovements").text("Less improvements you made to the property after 1 Oct 2001(* must be able to prove the value to SARS)");
+                        $("#purchasePrice").prop('readonly', true);
+                        $("#purchasePrice").css({ 'background-color': 'silver' });
                         beforeOct = true;
-                        preDateRadioButtons();                    
-                        calculateFigures();
+                        valuateDoc();
+                        preDateRadioButtons();
+                        $("#trBaseCost").show();
                     }
                     else {
-                        // $("#trAdvertising").show();
+                           // $("#trAdvertising").show();
                         // $("#trBondCosts").show();
                         //$("#trTransferCosts").show();
                         $("#lblAdvertising").text("Less private advertising costs (if any):");
@@ -165,8 +176,7 @@
                         $("#purchasePrice").prop('readonly', false);
                         beforeOct = false;
                         $("#purchasePrice").css({ 'background-color': 'none' });
-                        
-                        calculateFigures();
+                         $("#trBaseCost").hide();
                     }
 
                 }
@@ -199,7 +209,7 @@
             $("#ownedAfter").ForceNumericOnly();
             $("#ownerBefore").ForceNumericOnly();
 
-            $("input[type='text']").on("click", function () {
+           $("input[type='text']").on("click", function () {
                 $(this).select();
             });
 
@@ -219,30 +229,49 @@
         }
 
         function calculateFigures() {
-            var valDocValue = 0;
+           var valDocValue = 0;
             var percBase = false;
             var Option2 = false;
             var Option3 = false;
- 
-         $("#lblBCost").text("BASE COST:");
+            //if (beforeOct) {
+            //    if (valDoc) {
+            //        valDocValue = $("#docValue").val();
+            //        $("#purchasePrice").attr("value", valDocValue);
+            //    }
+            //    else {
+            //        if (!noRecordsKept) {
+            //            var valB = parseFloat($("#expenditureVal").val());
+            //            var valP = parseFloat($("#salesProceeds").val());
+            //            var valN = parseFloat($("#ownedAfter").val());
+            //            var valT = parseFloat($("#ownerBefore").val());
+            //            var valBase = 0.00;
+            //            valBase += (valP - valB);
+            //            valBase = valBase * valN;
+            //            valBase += valB;
+            //            valBase = valBase / (valT + valN);
+            //            $("#purchasePrice").attr("value", valBase.toFixed(2));
+            //        }
+            //        else {
+
+            //            $("#purchasePrice").attr("value", $("#salePrice").val() * 0.20);
+            //        }
+            //    }
+            //}
+         $("#lblBCost").text("Base Cost:");
          $("#salesProceeds").prop('readonly', false);
          $("#salesProceeds").css({ 'background-color': 'none' });
-            $("#trBaseCostNew").hide();
-            $("#trNettProfitNew").hide();
-            $("#NettProfit").hide();
-            $("#lblNettProfit").hide();
+
+
             if (beforeOct) {
 
                 $("#trBondCosts").show();
                 $("#trTransferCosts").show();
-                $("#predate").show();
-               
+
+
                 switch ($('input:radio[name=rdPreOct]:checked').val()) {
                     case "haveDoc":
                         valDocValue = $("#docValue").val();
                         $("#purchasePrice").attr("value", valDocValue);
-                        $("#NettProfit").show();
-                        $("#lblNettProfit").show();
                         break;
                     case "fillRecords":
                          $("#salesProceeds").attr("value", $("#salePrice").val());
@@ -255,29 +284,24 @@
                         var valBase = 0.00;
                         valBase += (valP - valB);
                         valBase = valBase * valN;
-                        valBase = valBase / (valT + valN);
                         valBase += valB;
-                        $("#NettProfit").show();
-                        $("#lblNettProfit").show();
+                        valBase = valBase / (valT + valN);
                         $("#purchasePrice").attr("value", valBase.toFixed(2));
-                        $("#lblBCost").text("BASE COST");
+                        $("#lblBCost").text("Allowable Expenditure");
                         Option2 = true;
                         break;
                     case "noRecords":
-                        $("#trBondCosts").hide();
-                        $("#trTransferCosts").hide();
-                        $("#lblBCost").text("Post  1 Oct 2001 Expenses");
-                        $("#trBaseCostNew").show();
-                        $("#trNettProfitNew").show();
+                         $("#trBondCosts").hide();
+                         $("#trTransferCosts").hide();
+                         $("#lblBCost").text("Post 2001 Expenses");
                         percBase = true;
-                        Option3 = true; 
                         break;
                 }
             }
 
 
             var vSalePrice = $("#salePrice").val();
-            
+
             var vPurchasePrice = $("#purchasePrice").val();
             var vImprovements = $("#improvements").val();
             var vTransferCosts = $("#transferCosts").val();
@@ -291,13 +315,13 @@
             var vCapitalGains;
             var vCGTProfitPerc;
             var vCGTPayable;
-            var allowExpenses=0.00;   
-            
+            var allowExpenses=0.00;
+
             vNettProfit = vSalePrice;
-                       
+
             if (!Option2 && !Option3)
             {
-                
+
                 vBaseCost += parseFloat(vPurchasePrice);
                 vBaseCost += parseFloat(vImprovements);
                 vBaseCost += parseFloat(vAgentCommision);
@@ -306,37 +330,26 @@
                 vBaseCost += parseFloat(vBondCosts);
                 vBaseCost += parseFloat(vAdvertisingCosts)
                 vNettProfit -= vBaseCost
-                $("#lblImprovements").text("Less value of improvements you made to the property after I Oct 2001 (* must be able to prove the value to SARS)");
                 $("#NettProfit").attr("value", vNettProfit.toFixed(2));
                 $("#baseCostPre2001").attr("value", parseFloat(vBaseCost).toFixed(2));
-                $("#trBaseCost").hide(); 
+
             }
             else if (Option2)
             {
                 $("#salesProceeds").prop('readonly', true);
                 $("#salesProceeds").css({ 'background-color': 'silver' });
-                $("#salesProceeds").attr("value", $("#salePrice").val());    
+                $("#salesProceeds").attr("value", $("#salePrice").val());
                 vBaseCost += parseFloat(vPurchasePrice);
                 allowExpenses +=  parseFloat(vImprovements);
                 allowExpenses += parseFloat(vAgentCommision);
                 allowExpenses += parseFloat(vComplianceCosts);
                 allowExpenses += parseFloat(vAdvertisingCosts)
-                vNettProfit -= (vBaseCost + allowExpenses);
+                vNettProfit -= (vBaseCost +allowExpenses);
                 $("#NettProfit").attr("value", vNettProfit.toFixed(2));
                 $("#baseCostPre2001").attr("value", parseFloat(allowExpenses).toFixed(2));
-               
-                $("#lblOriginalPrice").text("VALUATION DATE VALUE:");
-                $("#lblAdvertising").text("Less private advertising costs after 1 Oct 2001 (if any):");
-                $("#lblImprovements").text("Less improvements you made to the property after 1 Oct 2001(* must be able to prove the value to SARS)");
-                $("#purchasePrice").prop('readonly', true);
-                $("#purchasePrice").css({ 'background-color': 'silver' });
-                $("#trBaseCost").hide();
-               
             }
             else if (Option3)
             {
-                var vNewBaseCost = 0.00;
-                var vNewNettProfit = 0.00;
                 allowExpenses +=  parseFloat(vImprovements);
                 allowExpenses += parseFloat(vAgentCommision);
                 allowExpenses += parseFloat(vComplianceCosts);
@@ -344,19 +357,6 @@
                 vNettProfit -= allowExpenses;
                 $("#NettProfit").attr("value", vNettProfit.toFixed(2));
                 $("#baseCostPre2001").attr("value", parseFloat(allowExpenses).toFixed(2));
-                $("#predate").show();
-                $("#lblOriginalPrice").text("Base costs:");
-                $("#lblAdvertising").text("Less private advertising costs after 1 Oct 2001 (if any):");
-                $("#lblImprovements").text("Less improvements you made to the property after 1 Oct 2001(* must be able to prove the value to SARS)");
-                $("#purchasePrice").prop('readonly', true);
-                $("#purchasePrice").css({ 'background-color': 'silver' });
-                $("#trBaseCost").show();
-              
-         
-                vNewBaseCost = (vNettProfit * 0.2) + allowExpenses;
-                vNewNettProfit = vSalePrice - vNewBaseCost;
-                $("#BaseCostNew").attr("value", vNewBaseCost.toFixed(2));
-                $("#NettProfitNew").attr("value", vNewNettProfit.toFixed(2));
             }
 
             if ($("#NettProfit").val() == "NaN" || $("#NettProfit").val() == "Infinity" || $("#NettProfit").val() == "-Infinity")
@@ -367,13 +367,11 @@
                 {
                      $("#purchasePrice").attr("value", "Waiting to Calculate...");
                 }
-            
-        
+
+
             if (percBase) {
                 $("#BaseCost").attr("value", (vNettProfit * 0.2).toFixed(2));
-                vNettProfit = vNewNettProfit;
-               
-               
+                vNettProfit = vNettProfit * 0.2;
             }
 
 
@@ -383,10 +381,6 @@
             else {
                 vCapitalGains = vNettProfit
             }
-
-
-
-
 
             if ($('input:radio[name=radio-1]:checked').val() == "natPerson") {
 
@@ -463,6 +457,7 @@
             if (vCGTPayable > 0) { $("#CGTPayable").attr("value", vCGTPayable.toFixed(2)); }
             else { $("#CGTPayable").attr("value", 0); }
         }
+
 
     </script>
 </head>

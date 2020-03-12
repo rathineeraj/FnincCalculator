@@ -33,7 +33,7 @@ public class CalenderActivity extends AppCompatActivity {
 
         etDate = findViewById(R.id.etDate);
         etDays = findViewById(R.id.etDays);
-        etDays.setText("45");
+        etDays.setText(R.string.days);
         chk = findViewById(R.id.chk);
         chkHolidays = findViewById(R.id.chkHolidays);
         tvFutureDate = findViewById(R.id.tvFutureDate);

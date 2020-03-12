@@ -8,14 +8,14 @@ import android.view.Window;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class SplashScreen extends AppCompatActivity {
-    private static int SPLASH_TIME_OUT = 1000;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        // TODO Auto-generated method stub
+
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.splashscreen);
+        int SPLASH_TIME_OUT = 1000;
         new Handler().postDelayed(new Runnable() {
 
             @Override

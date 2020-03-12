@@ -17,5 +17,8 @@
     <string name="capital_gains">Capital Gains Tax Calculator</string>
 
     <string name="terms">Take note that cessions of exclusive use areas in certain sectional title schemes will increase the costs. You may also be required to provide a contribution towards levy clearance in sectional title or home owners clearance in conventional property. If more than one property is included in the same instrument the fee will increase by 15% per additional property</string>
+    <string name="interest_rate">10.25</string>
+    <string name="repayment_peroiod">20</string>
+    <string name="days">45</string>
 
 </resources>

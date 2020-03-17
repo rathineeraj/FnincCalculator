@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\AndroidStudioProjects\\FnincCalculator\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
+            "outputFile": "D:\\FnincCalculator\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Neeraj\\.gradle\\caches\\transforms-2\\files-2.1\\45ca2b27b5a8d2aecb4ee89b6457658f\\core-1.0.0\\res\\values\\values.xml",
@@ -23,13 +23,13 @@
                     }
                 },
                 {
-                    "source": "D:\\AndroidStudioProjects\\FnincCalculator\\app\\src\\main\\res\\values\\strings.xml",
+                    "source": "D:\\FnincCalculator\\app\\src\\main\\res\\values\\strings.xml",
                     "from": {
                         "startLines": "5,3,13,16,12,10,6,7,8,21,15,14,4,19,11,20,18",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "162,56,631,782,581,437,215,275,348,1350,736,688,109,1253,516,1301,854",
+                        "startOffsets": "167,59,644,798,593,447,221,282,356,1371,751,702,113,1272,527,1321,872",
                         "endColumns": "52,52,56,70,49,78,59,72,87,35,45,47,52,47,64,48,398",
-                        "endOffsets": "210,104,683,848,626,511,270,343,431,1381,777,731,157,1296,576,1345,1248"
+                        "endOffsets": "215,107,696,864,638,521,276,350,439,1402,792,745,161,1315,587,1365,1266"
                     },
                     "to": {
                         "startLines": "254,255,256,257,258,259,260,261,262,263,264,265,266,267,268,269,272",
@@ -40,24 +40,24 @@
                     }
                 },
                 {
-                    "source": "D:\\AndroidStudioProjects\\FnincCalculator\\app\\src\\main\\res\\values\\dimens.xml",
+                    "source": "D:\\FnincCalculator\\app\\src\\main\\res\\values\\colors.xml",
                     "from": {
-                        "startLines": "3,4,6",
-                        "startColumns": "4,4,4",
-                        "startOffsets": "92,151,210",
-                        "endColumns": "57,55,39",
-                        "endOffsets": "145,202,245"
+                        "startLines": "3,2",
+                        "startColumns": "4,4",
+                        "startOffsets": "104,57",
+                        "endColumns": "49,45",
+                        "endOffsets": "149,98"
                     },
                     "to": {
-                        "startLines": "149,150,167",
-                        "startColumns": "4,4,4",
-                        "startOffsets": "10044,10102,11430",
-                        "endColumns": "57,55,39",
-                        "endOffsets": "10097,10153,11465"
+                        "startLines": "28,29",
+                        "startColumns": "4,4",
+                        "startOffsets": "1940,1990",
+                        "endColumns": "49,45",
+                        "endOffsets": "1985,2031"
                     }
                 },
                 {
-                    "source": "D:\\AndroidStudioProjects\\FnincCalculator\\app\\src\\main\\res\\values\\styles.xml",
+                    "source": "D:\\FnincCalculator\\app\\src\\main\\res\\values\\styles.xml",
                     "from": {
                         "startLines": "6,15,19",
                         "startColumns": "4,4,4",
@@ -73,23 +73,6 @@
                         "endLines": "284,287,292",
                         "endColumns": "12,12,12",
                         "endOffsets": "19069,19250,19492"
-                    }
-                },
-                {
-                    "source": "D:\\AndroidStudioProjects\\FnincCalculator\\app\\src\\main\\res\\values\\colors.xml",
-                    "from": {
-                        "startLines": "3,2",
-                        "startColumns": "4,4",
-                        "startOffsets": "104,57",
-                        "endColumns": "49,45",
-                        "endOffsets": "149,98"
-                    },
-                    "to": {
-                        "startLines": "28,29",
-                        "startColumns": "4,4",
-                        "startOffsets": "1940,1990",
-                        "endColumns": "49,45",
-                        "endOffsets": "1985,2031"
                     }
                 },
                 {
@@ -128,6 +111,23 @@
                         "endLines": "2,1753,2457,2546",
                         "endColumns": "60,12,24,24",
                         "endOffsets": "161,118484,156449,161660"
+                    }
+                },
+                {
+                    "source": "D:\\FnincCalculator\\app\\src\\main\\res\\values\\dimens.xml",
+                    "from": {
+                        "startLines": "3,4,6",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "92,151,210",
+                        "endColumns": "57,55,39",
+                        "endOffsets": "145,202,245"
+                    },
+                    "to": {
+                        "startLines": "149,150,167",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "10044,10102,11430",
+                        "endColumns": "57,55,39",
+                        "endOffsets": "10097,10153,11465"
                     }
                 }
             ]

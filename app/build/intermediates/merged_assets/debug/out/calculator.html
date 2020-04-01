@@ -38,8 +38,6 @@
         });
 
         $(document).ready(function () {
-         
-
             $("#trBaseCost").hide();
             $("#predate").hide();
             $('input:radio[name="radio-1"]').on("click", function () {
@@ -62,6 +60,8 @@
 
             });
 
+
+
             $('input:checkbox[name="chkPrimaryResidence"]').on("click", calculateFigures);
             $('input:checkbox[name="chkAnnualCapitalGains"]').on("click", calculateFigures);
             $('input:radio[name="taxBracket"]').on("click", calculateFigures);
@@ -80,7 +80,8 @@
             $("#manValuation").hide();
             $("#trPurchasePrice").hide();
             $("#trBaseCost").hide();
-            
+
+
             switch ($('input:radio[name=rdPreOct]:checked').val()) {
                 case "haveDoc":
                     $("#documentaryValue").show();
@@ -149,8 +150,8 @@
                     }
 
                     var date2 = new Date(2001, 9, 1);
-                    if (date1 < date2) {                   
-                       //$("#trAdvertising").hide();
+                    if (date1 < date2) {
+                        //$("#trAdvertising").hide();
                         //$("#trBondCosts").hide();
                         //$("#trTransferCosts").hide();
 
@@ -166,7 +167,7 @@
                         $("#trBaseCost").show();
                     }
                     else {
-                           // $("#trAdvertising").show();
+                        // $("#trAdvertising").show();
                         // $("#trBondCosts").show();
                         //$("#trTransferCosts").show();
                         $("#lblAdvertising").text("Less private advertising costs (if any):");
@@ -209,7 +210,7 @@
             $("#ownedAfter").ForceNumericOnly();
             $("#ownerBefore").ForceNumericOnly();
 
-           $("input[type='text']").on("click", function () {
+            $("input[type='text']").on("click", function () {
                 $(this).select();
             });
 
@@ -229,7 +230,7 @@
         }
 
         function calculateFigures() {
-           var valDocValue = 0;
+            var valDocValue = 0;
             var percBase = false;
             var Option2 = false;
             var Option3 = false;
@@ -462,253 +463,233 @@
             else { $("#CGTPayable").attr("value", 0); }
         }
 
-
     </script>
 </head>
 <body>
-    <div id="mainCalculator">
-        <div id="dateSelector">
-            <table style="width:100%" >
-                <tr>
-                    <td colspan="2" align="left">
-                        <input style="background-color:#7030a0; color:#FFF; font-size:16px; padding:5px 5px 3px 5px;" type="button" value="RESET"  onClick="window.location.reload()"/> 
-                  <span style="color:#7030a0">(*Remember to click reset button for every new calculation)</span> </td>
-                </tr>
-                <tr>
-                    <td height="30" align="right" style="width:60%">Original Purchase Date:</td>
-                  <td> <input type="text" id="purchaseDate"> [e.g 01/11/2010]  </td>
-                </tr>
-            </table>
-        </div>
-        <div id="divPurchasePrice">
-            <table style="width:100%">
-                <tr>
-                    <td height="30" align="right" style="width:60%">Insert purchase price you have sold your property for:</td>
-                  <td><input type="text" id="salePrice" style="text-align:right" value="0" /></td>
-                </tr>
-            </table>
-        </div>
-        <div id="predate">
-            <div id="choosePreDate">
-                <table style="width:100%">
-                    <tr>
-                        <td colspan="2" align="center"><br>
-                            <fieldset>
-                                <legend></legend>
-                                <label for="rd-1">Did you obtain a valuation as at 1 Oct 2001</label>
-                                <input type="radio" name="rdPreOct" id="rd-1" value="haveDoc" checked="checked">
-                                <label for="rd-2">If not, can you answer the following questions</label>
-                                <input type="radio" name="rdPreOct" id="rd-2" value="fillRecords">
-                                <label for="rd-3">I did not keep records and unable to answer any questions</label>
-                                <input type="radio" name="rdPreOct" id="rd-3" value="noRecords">
-                            </fieldset>
-
-                        </td>
-                    </tr>
-                </table>
-            </div>
-
-            <div id="documentaryValue">
-                <table style="width:100%">
-                    <tr>
-                        <td style="width:60%" align="right">Insert the value of the documentary valuation you obtained as at 1 Oct 2001:</td>
-                        <td><input type="text" id="docValue" style="text-align:right" value="0" /></td>
-                    </tr>
-                </table>
-            </div>
-            <div id="manValuation">
-                <table style="width:100%">
-                    <tr>
-                        <td height="30" align="right" style="width:60%">Expenditure on the property incurred before 1 Oct 2001 <br>
-                      (*must be able to prove the value to SARS):</td>
-                      <td><input type="text" id="expenditureVal" style="text-align:right" value="0" /></td>
-                    </tr>
-                    <tr>
-                        <td height="30" align="right" style="width:50%">Sale price you achieved:</td>
-                      <td><input type="text" id="salesProceeds" style="text-align:right" value="0" /></td>
-                    </tr>
-                    <tr>
-                        <td height="30" align="right" style="width:50%">Number of years you owned the property before 1 October 2001:</td>
-                      <td><input type="text" id="ownedAfter" style="text-align:right" value="0" /></td>
-                    </tr>
-                    <tr>
-                        <td height="30" align="right" style="width:50%">Number of years you owned the property after 1 October 2001:</td>
-                      <td><input type="text" id="ownerBefore" style="text-align:right" value="0" /></td>
-                    </tr>
-                </table>
-            </div>
-
-        </div>
-
-        <div id="generalPricing">
-            <table style="width:100%">
-                <tr id="trPurchasePrice">
-                    <td height="30" align="right" style="width:60%"> <label id="lblOriginalPrice">Less the price you originally purchased the property:</label></td>
-                  <td><input type="text" id="purchasePrice" style="text-align:right" value="0" /></td>
-                </tr>
-                <tr>
-                    <td height="30" align="right" style="width:60%">
-                        <label id="lblImprovements">
-                            Less value of improvements you made to property
-                              <br>
-                        (*must be able to prove the value to SARS): </label>
-                    </td>
-                  <td> <input type="text" id="improvements" style="text-align:right" value="0" /></td>
-                </tr>
-                <tr id="trTransferCosts">
-                    <td height="30" align="right">Less the transfer costs you paid when you purchased:</td>
-                  <td><input type="text" id="transferCosts" style="text-align:right" value="0" /></td>
-                </tr>
-                <tr id="trBondCosts">
-                    <td height="30" align="right">Less the bond costs you paid when you purchased: </td>
-                  <td><input type="text" id="bondCosts" style="text-align:right" value="0" /></td>
-                </tr>
-                <tr>
-                    <td height="30" align="right">Less the Agents Commission you will pay upon the sale:</td>
-                  <td><input type="text" id="agentCommision" style="text-align:right" value="0" /></td>
-                </tr>
-                <tr id="trAdvertising">
-                    <td height="30" align="right"> <label id="lblAdvertising">Less private advertising costs (if any):</label></td>
-                  <td><input type="text" id="advertisingCosts" style="text-align:right" value="0" /></td>
-                </tr>
-                <tr>
-                    <td height="30" align="right">Less bond cancellation costs and certificates of compliance <br>
-                  (i.e electrical, beetle, plumbing, gas and electrical fence):</td>
-                  <td><input type="text" id="complianceCosts" style="text-align:right" value="0" /></td>
-                </tr>
-                <tr>
-                    <td height="30" align="right"><label id="lblBCost">BASE COST:</label></td>
-                  <td><input type="text" id="baseCostPre2001" style="text-align:right;background-color:silver" readonly="readonly" value="0" /></td>
-                </tr>
-                <tr>
-                    <td height="30" align="right"><label id="lblNettProfit">NETT PROFIT:</label></td>
-                  <td><input type="text" id="NettProfit" readonly="readonly" style="text-align:right;background-color:silver" value="0" /></td>
-                </tr>
-                <tr id="trBaseCost">
-                    <td height="30" align="right">
-                        20% of (sale price less expenditure incurred on or after valuation date) will be deemed to be your VALUATION DATE VALUE:
-                    </td>
-                  <td><input type="text" id="BaseCost" readonly="readonly" style="text-align:right;background-color:silver" value="0" /></td>
-                </tr>
-                <tr id="trBaseCostNew">
-                    <td height="30" align="right">
-                        BASE COST:
-                    </td>
-                  <td><input type="text" id="BaseCostNew" readonly="readonly" style="text-align:right;background-color:silver" value="0" /></td>
-                </tr>
-                <tr id="trNettProfitNew">
-                    <td height="30" align="right">
-                        NETT PROFIT:
-                    </td>
-                  <td><input type="text" id="NettProfitNew" readonly="readonly" style="text-align:right;background-color:silver" value="0" /></td>
-                </tr>
-                <tr>
-                    <td colspan="2" align="center"><br>
-                        <fieldset>
-                            <legend>Is the property now being sold owned by:</legend>
-                            <label for="radio-1">a natural person/s </label>
-                            <input type="radio" name="radio-1" id="radio-1" value="natPerson" checked="checked">
-                            <label for="radio-2">a Close Corporation</label>
-                            <input type="radio" name="radio-1" id="radio-2" value="closeCorporation">
-                            <label for="radio-3">a Company </label>
-                            <input type="radio" name="radio-1" id="radio-3" value="company">
-                            <label for="radio-4">a Trust  </label>
-                            <input type="radio" name="radio-1" id="radio-4" value="trust">
-                        </fieldset>
-
-                    </td>
-                </tr>
-            </table>
-        </div>
-        <div id="Primaryresidence"><br>
-            <table style="width:100%">
-                <tr>
-                    <td style="width:60%" align="right">
-                        Is the property your primary residence? (your home)
-                    </td>
-                    <td>
-                        <input type="checkbox" name="chkPrimaryResidence" id="chkPrimaryResidence">
-
-                    </td>
-                </tr>
-                <tr>
-                    <td align="right">
-                        Have you ulitised your ANNUAL CAPITAL GAINS EXCLUSION of R40 000
-                    </td>
-                    <td>
-                        <input type="checkbox" name="chkAnnualCapitalGains" id="chkAnnualCapitalGains" checked="checked">
-                    </td>
-                </tr>
-                <tr>
-                    <td align="right">
-                        How Many Natural Persons Own the Property:
-                    </td>
-                    <td>
-                        <input type="text" id="noOwners" value="1" />
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan="2" align="center"><br>
-                        <fieldset>
-                            <legend>Select your income tax bracket:</legend>
-                            <label for="taxBracket1">R 0 – R 195 850 (18%)</label>
-                            <input type="radio" name="taxBracket" id="taxBracket1" value="taxBracket1" checked="checked">
-                            <label for="taxBracket2">R 195 851 – R 305 850 (26%)</label>
-                            <input type="radio" name="taxBracket" id="taxBracket2" value="taxBracket2">
-                            <label for="taxBracket3">R 305 850	 – R 423 300 (31%)</label>
-                          <input type="radio" name="taxBracket" id="taxBracket3" value="taxBracket3">
-                            <label for="taxBracket4">R 423 300 – R 555 600 (36%)</label>
-                            <input type="radio" name="taxBracket" id="taxBracket4" value="taxBracket4">
-                            <label for="taxBracket5">R555 600 – R708 310 (39%)</label>
-                            <input type="radio" name="taxBracket" id="taxBracket5" value="taxBracket5">
-                            <label for="taxBracket6">R 708 310 – R1 500 001 (41%)</label>
-                            <input type="radio" name="taxBracket" id="taxBracket6" value="taxBracket6">
-                            <label for="taxBracket7">R1 500 001 and upwards (45%)</label>
-                            <input type="radio" name="taxBracket" id="taxBracket7" value="taxBracket7">
-                        </fieldset>
-                    </td>
-                </tr>
-            </table>
-        </div>
-        <br>
-  <div id="NETT_PROFIT">
-            <table style="width:100%">
-                <tr>
-                    <td height="30" align="right" style="width:60%"> Capital Gains Taxable PROFIT:</td>
-                  <td><input type="text" id="CGTProfit" value="0" readonly="readonly" style="text-align:right;background-color:silver" /></td>
-                </tr>
-                <tr>
-                    <td height="30" align="right" style="width:60%"><label id="lblPercCGT">40% of the Capital Gains Taxable Profit:</label> </td>
-                  <td><input type="text" id="CGTProfitPerc" value="0" readonly="readonly" style="text-align:right;background-color:silver" /></td>
-                </tr>
-                <tr>
-                    <td height="30" align="right" style="width:60%"> <label id="lblCGTPayable"> Your CGT payable :</label></td>
-                  <td><input type="text" id="CGTPayable" value="0" readonly="readonly" style="text-align:right;background-color:silver" /></td>
-                </tr>
+<div id="mainCalculator">
+    <div id="dateSelector">
+        <table style="width:100%">
+            <tr>
+                <td style="width:50%" align="right">Original Purchase Date:</td>
+                <td> <input type="text" id="purchaseDate"> [e.g 01/11/2010]  </td>
+            </tr>
         </table>
+    </div>
+    <div id="divPurchasePrice">
+        <table style="width:100%">
+            <tr>
+                <td style="width:50%" align="right">Insert purchase price you have sold your property for:</td>
+                <td><input type="text" id="salePrice" style="text-align:right" value="0" /></td>
+            </tr>
+        </table>
+    </div>
+    <div id="predate">
+        <div id="choosePreDate">
+            <table style="width:100%">
+                <tr>
+                    <td colspan="2" align="center">
+                        <fieldset>
+                            <legend></legend>
+                            <label for="rd-1">Did you obtain a valuation as at 1 Oct 2001</label>
+                            <input type="radio" name="rdPreOct" id="rd-1" value="haveDoc" checked="checked">
+                            <label for="rd-2">If not, can you answer the following questions</label>
+                            <input type="radio" name="rdPreOct" id="rd-2" value="fillRecords">
+                            <label for="rd-3">I did not keep records and unable to answer any questions</label>
+                            <input type="radio" name="rdPreOct" id="rd-3" value="noRecords">
+                        </fieldset>
+
+                    </td>
+                </tr>
+            </table>
         </div>
+
+        <div id="documentaryValue">
+            <table style="width:100%">
+                <tr>
+                    <td style="width:50%" align="right">Insert the value of the documentary valuation you obtained as at 1 Oct 2001:</td>
+                    <td><input type="text" id="docValue" style="text-align:right" value="0" /></td>
+                </tr>
+            </table>
+        </div>
+        <div id="manValuation">
+            <table style="width:100%">
+                <tr>
+                    <td style="width:50%" align="right">Expenditure on the property incurred before 1 Oct 2001:</td>
+                    <td><input type="text" id="expenditureVal" style="text-align:right" value="0" /></td>
+                </tr>
+                <tr>
+                    <td style="width:50%" align="right">Sale price you achieved:</td>
+                    <td><input type="text" id="salesProceeds" style="text-align:right" value="0" /></td>
+                </tr>
+                <tr>
+                    <td style="width:50%" align="right">Number of years you owned the property before 1 October 2001:</td>
+                    <td><input type="text" id="ownedAfter" style="text-align:right" value="0" /></td>
+                </tr>
+                <tr>
+                    <td style="width:50%" align="right">Number of years you owned the property after 1 October 2001:</td>
+                    <td><input type="text" id="ownerBefore" style="text-align:right" value="0" /></td>
+                </tr>
+            </table>
+        </div>
+
     </div>
-    <div id="terms">
-        <table align="center" style="width:75%">
-        <tr>
-          <td colspan="2"><br />
-            <br /></td>
-        </tr>
-        <tr>
-          <td colspan="2" align="justify"><p>This calculator relies on user input and Faurie Nell Incorporated cannot take responsibility for any errors or omissions in this regard. This calculator is intended to provide a general guide on the capital gains tax applicable to the sale of your immovable property only and is not intended as advice in respect of your total annual tax return and total annual capital gains tax liability which annual return will include information beyond the knowledge of Faurie Nell Incorporated. In the final instance please seek advice from a tax specialist advisor. </p>
-            <p>&nbsp;</p></td>
-        </tr>
-        <tr>
-          <td width="64%" align="right" style="width:60%"><strong>ACCEPT TERMS: &nbsp; </strong></td>
-          <td width="36%"><p>
-            <input type="checkbox" name="chkAcceptTerrms" id="chkAcceptTerrms">
-          </p></td>
-        </tr>
-        <tr>
-          <td align="right" style="width:60%">&nbsp;</td>
-          <td>&nbsp;</td>
-        </tr>
-      </table>
+
+    <div id="generalPricing">
+        <table style="width:100%">
+            <tr id="trPurchasePrice">
+                <td style="width:50%" align="right"> <label id="lblOriginalPrice">Less the price you originally purchased the property:</label></td>
+                <td><input type="text" id="purchasePrice" style="text-align:right" value="0" /></td>
+            </tr>
+            <tr>
+                <td style="width:50%" align="right">
+                    <label id="lblImprovements">
+                        Less value of improvements you made to property
+                        (*must be able to prove the value to SARS):
+                    </label>
+                </td>
+                <td> <input type="text" id="improvements" style="text-align:right" value="0" /></td>
+            </tr>
+            <tr id="trTransferCosts">
+                <td align="right">Less the transfer costs you paid when you purchased:</td>
+                <td><input type="text" id="transferCosts" style="text-align:right" value="0" /></td>
+            </tr>
+            <tr id="trBondCosts">
+                <td align="right">Less the bond costs you paid when you purchased: </td>
+                <td><input type="text" id="bondCosts" style="text-align:right" value="0" /></td>
+            </tr>
+            <tr>
+                <td align="right">Less the Agents Commission you will pay upon the sale:</td>
+                <td><input type="text" id="agentCommision" style="text-align:right" value="0" /></td>
+            </tr>
+            <tr id="trAdvertising">
+                <td align="right"> <label id="lblAdvertising">Less private advertising costs (if any):</label></td>
+                <td><input type="text" id="advertisingCosts" style="text-align:right" value="0" /></td>
+            </tr>
+            <tr>
+                <td align="right">Less bond cancellation costs and certificates of compliance (i.e electrical, beetle, plumbing, gas and electrical fence):</td>
+                <td><input type="text" id="complianceCosts" style="text-align:right" value="0" /></td>
+            </tr>
+            <tr>
+                <td align="right"><label id="lblBCost">Base Cost:</label></td>
+                <td><input type="text" id="baseCostPre2001" style="text-align:right;background-color:silver" readonly="readonly" value="0" /></td>
+            </tr>
+            <tr>
+                <td align="right"> NETT PROFIT:</td>
+                <td><input type="text" id="NettProfit" readonly="readonly" style="text-align:right;background-color:silver" value="0" /></td>
+            </tr>
+            <tr id="trBaseCost">
+                <td align="right"> 20% of your(sale price less expenditure incurred on or after valuation date) will be deemed to be your base costs:</td>
+                <td><input type="text" id="BaseCost" readonly="readonly" style="text-align:right;background-color:silver" value="0" /></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <fieldset>
+                        <legend>Is the property now being sold owned by:</legend>
+                        <label for="radio-1">a natural person/s </label>
+                        <input type="radio" name="radio-1" id="radio-1" value="natPerson" checked="checked">
+                        <label for="radio-2">a Close Corporation</label>
+                        <input type="radio" name="radio-1" id="radio-2" value="closeCorporation">
+                        <label for="radio-3">a Company </label>
+                        <input type="radio" name="radio-1" id="radio-3" value="company">
+                        <label for="radio-4">a Trust  </label>
+                        <input type="radio" name="radio-1" id="radio-4" value="trust">
+                    </fieldset>
+
+                </td>
+            </tr>
+        </table>
     </div>
+    <div id="Primaryresidence">
+        <table style="width:100%">
+            <tr>
+                <td style="width:50%" align="right">
+                    Is the property your primary residence? (your home)
+                </td>
+                <td>
+                    <input type="checkbox" name="chkPrimaryResidence" id="chkPrimaryResidence">
+
+                </td>
+            </tr>
+            <tr>
+                <td align="right">
+                    Have you ulitised your ANNUAL CAPITAL GAINS EXCLUSION of R40 000
+                </td>
+                <td>
+                    <input type="checkbox" name="chkAnnualCapitalGains" id="chkAnnualCapitalGains" checked="checked">
+                </td>
+            </tr>
+            <tr>
+                <td align="right">
+                    How Many Natural Persons Own the Property:
+                </td>
+                <td>
+                    <input type="text" id="noOwners" value="1" />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <fieldset>
+                        <legend>Select your income tax bracket:</legend>
+                        <label for="taxBracket1">R 0 – R 205 900 (18%)</label>
+                        <input type="radio" name="taxBracket" id="taxBracket1" value="taxBracket1" checked="checked">
+                        <label for="taxBracket2">R 205 901 – R 321 600 (26%)</label>
+                        <input type="radio" name="taxBracket" id="taxBracket2" value="taxBracket2">
+                        <label for="taxBracket3">R 321 601	 – R 445 100 (31%)</label>
+                        <input type="radio" name="taxBracket" id="taxBracket3" value="taxBracket3">
+                        <label for="taxBracket4">R 445 101 – R 584 200 (36%)</label>
+                        <input type="radio" name="taxBracket" id="taxBracket4" value="taxBracket4">
+                        <label for="taxBracket5">R584 201 – R744 800 (39%)</label>
+                        <input type="radio" name="taxBracket" id="taxBracket5" value="taxBracket5">
+                        <label for="taxBracket6">R 744 801 – R1 577 300 (41%)</label>
+                        <input type="radio" name="taxBracket" id="taxBracket6" value="taxBracket6">
+                        <label for="taxBracket7">R1 577 301 and above (45%)</label>
+                        <input type="radio" name="taxBracket" id="taxBracket7" value="taxBracket7">
+                    </fieldset>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div id="NETT_PROFIT">
+        <table style="width:100%">
+            <tr>
+                <td align="right" style="width:50%"> Capital Gains Taxable PROFIT:</td>
+                <td><input type="text" id="CGTProfit" value="0" readonly="readonly" style="text-align:right;background-color:silver" /></td>
+            </tr>
+            <tr>
+                <td align="right" style="width:50%"><label id="lblPercCGT">40% of the Capital Gains Taxable Profit:</label> </td>
+                <td><input type="text" id="CGTProfitPerc" value="0" readonly="readonly" style="text-align:right;background-color:silver" /></td>
+            </tr>
+            <tr>
+                <td align="right" style="width:50%"> <label id="lblCGTPayable"> Your CGT payable :</label></td>
+                <td><input type="text" id="CGTPayable" value="0" readonly="readonly" style="text-align:right;background-color:silver" /></td>
+            </tr>
+        </table>
+    </div>
+</div>
+<div id="terms">
+    <table align="center" style="width:50%">
+       
+        <tr>
+            <td colspan="2">
+                <br />
+                <br />
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                This calculator relies on user input and Faurie Nell Incorporated cannot take responsibility for any errors or omissions in this regard. This calculator is intended to provide a general guide on the capital gains tax applicable to the sale of your immovable property only and is not intended as advice in respect of your total annual tax return and total annual capital gains tax liability which annual return will include information beyond the knowledge of Faurie Nell Incorporated. In the final instance please seek advice from a tax specialist advisor.
+            </td>
+        </tr>
+        <tr>
+
+            <td align="right" style="width:50%">
+                Accept Terms:
+            </td>
+            <td>
+                <input type="checkbox" name="chkAcceptTerrms" id="chkAcceptTerrms">
+            </td>
+        </tr>
+    </table>
+</div>
 </body>
 </html>

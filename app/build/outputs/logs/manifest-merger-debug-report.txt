@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\FnincCalculator\app\src\main\AndroidManifest.xml:2:1-63:12
-INJECTED from D:\FnincCalculator\app\src\main\AndroidManifest.xml:2:1-63:12
-INJECTED from D:\FnincCalculator\app\src\main\AndroidManifest.xml:2:1-63:12
-INJECTED from D:\FnincCalculator\app\src\main\AndroidManifest.xml:2:1-63:12
+ADDED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml:2:1-63:12
+INJECTED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml:2:1-63:12
+INJECTED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml:2:1-63:12
+INJECTED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml:2:1-63:12
 MERGED from [androidx.appcompat:appcompat:1.0.0] C:\Users\Neeraj\.gradle\caches\transforms-2\files-2.1\24c8333af3f2d43ff2b1c71d3d52d739\appcompat-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.multidex:multidex:2.0.0] C:\Users\Neeraj\.gradle\caches\transforms-2\files-2.1\b49de40908d20f742852b1e123dcefcf\multidex-2.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.fragment:fragment:1.0.0] C:\Users\Neeraj\.gradle\caches\transforms-2\files-2.1\3c34672520a20385459add6dbdffba42\fragment-1.0.0\AndroidManifest.xml:17:1-22:12
@@ -31,33 +31,33 @@ MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\Neeraj\.gradl
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\Neeraj\.gradle\caches\transforms-2\files-2.1\0571339fd4cb74441b19561f6766bb98\lifecycle-livedata-core-2.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\Neeraj\.gradle\caches\transforms-2\files-2.1\0f91f258f9d0abaa0e56c019df47bd85\core-runtime-2.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Neeraj\.gradle\caches\transforms-2\files-2.1\c4e2469658fdd8801a5306110b0915fc\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
-INJECTED from D:\FnincCalculator\app\src\main\AndroidManifest.xml:2:1-63:12
-INJECTED from D:\FnincCalculator\app\src\main\AndroidManifest.xml:2:1-63:12
-INJECTED from D:\FnincCalculator\app\src\main\AndroidManifest.xml:2:1-63:12
+INJECTED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml:2:1-63:12
+INJECTED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml:2:1-63:12
+INJECTED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml:2:1-63:12
 	package
-		ADDED from D:\FnincCalculator\app\src\main\AndroidManifest.xml:3:5-47
-		INJECTED from D:\FnincCalculator\app\src\main\AndroidManifest.xml
-		INJECTED from D:\FnincCalculator\app\src\main\AndroidManifest.xml
+		ADDED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml:3:5-47
+		INJECTED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml
+		INJECTED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml
 	android:versionName
-		INJECTED from D:\FnincCalculator\app\src\main\AndroidManifest.xml
-		ADDED from D:\FnincCalculator\app\src\main\AndroidManifest.xml:2:1-63:12
-		INJECTED from D:\FnincCalculator\app\src\main\AndroidManifest.xml
+		INJECTED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml
+		ADDED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml:2:1-63:12
+		INJECTED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml
 	android:versionCode
-		INJECTED from D:\FnincCalculator\app\src\main\AndroidManifest.xml
-		ADDED from D:\FnincCalculator\app\src\main\AndroidManifest.xml:2:1-63:12
-		INJECTED from D:\FnincCalculator\app\src\main\AndroidManifest.xml
+		INJECTED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml
+		ADDED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml:2:1-63:12
+		INJECTED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from D:\FnincCalculator\app\src\main\AndroidManifest.xml:2:11-69
+		ADDED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml:2:11-69
 uses-permission#android.permission.READ_LOGS
-ADDED from D:\FnincCalculator\app\src\main\AndroidManifest.xml:6:5-68
+ADDED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml:6:5-68
 	android:name
-		ADDED from D:\FnincCalculator\app\src\main\AndroidManifest.xml:6:22-65
+		ADDED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml:6:22-65
 uses-permission#android.permission.INTERNET
-ADDED from D:\FnincCalculator\app\src\main\AndroidManifest.xml:7:5-67
+ADDED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml:7:5-67
 	android:name
-		ADDED from D:\FnincCalculator\app\src\main\AndroidManifest.xml:7:22-64
+		ADDED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml:7:22-64
 application
-ADDED from D:\FnincCalculator\app\src\main\AndroidManifest.xml:9:5-61:19
+ADDED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml:9:5-61:19
 MERGED from [androidx.core:core:1.0.0] C:\Users\Neeraj\.gradle\caches\transforms-2\files-2.1\45ca2b27b5a8d2aecb4ee89b6457658f\core-1.0.0\AndroidManifest.xml:22:5-89
 MERGED from [androidx.core:core:1.0.0] C:\Users\Neeraj\.gradle\caches\transforms-2\files-2.1\45ca2b27b5a8d2aecb4ee89b6457658f\core-1.0.0\AndroidManifest.xml:22:5-89
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] C:\Users\Neeraj\.gradle\caches\transforms-2\files-2.1\f6ee4caf47f75b1f61a904ebd80d0032\versionedparcelable-1.0.0\AndroidManifest.xml:22:5-23:19
@@ -65,109 +65,109 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] C:\Users\Ne
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.0.0] C:\Users\Neeraj\.gradle\caches\transforms-2\files-2.1\45ca2b27b5a8d2aecb4ee89b6457658f\core-1.0.0\AndroidManifest.xml:22:18-86
 	android:label
-		ADDED from D:\FnincCalculator\app\src\main\AndroidManifest.xml:13:9-41
+		ADDED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml:13:9-41
 	android:icon
-		ADDED from D:\FnincCalculator\app\src\main\AndroidManifest.xml:12:9-39
+		ADDED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml:12:9-39
 	android:allowBackup
-		ADDED from D:\FnincCalculator\app\src\main\AndroidManifest.xml:11:9-35
+		ADDED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml:11:9-35
 	android:theme
-		ADDED from D:\FnincCalculator\app\src\main\AndroidManifest.xml:14:9-40
+		ADDED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml:14:9-40
 	android:name
-		ADDED from D:\FnincCalculator\app\src\main\AndroidManifest.xml:10:9-78
+		ADDED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml:10:9-78
 activity#com.fnincnellinc.fninccalculator.SplashScreen
-ADDED from D:\FnincCalculator\app\src\main\AndroidManifest.xml:15:9-24:20
+ADDED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml:15:9-24:20
 	android:screenOrientation
-		ADDED from D:\FnincCalculator\app\src\main\AndroidManifest.xml:18:13-49
+		ADDED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml:18:13-49
 	android:label
-		ADDED from D:\FnincCalculator\app\src\main\AndroidManifest.xml:17:13-45
+		ADDED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml:17:13-45
 	android:name
-		ADDED from D:\FnincCalculator\app\src\main\AndroidManifest.xml:16:13-41
+		ADDED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml:16:13-41
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from D:\FnincCalculator\app\src\main\AndroidManifest.xml:19:13-23:29
+ADDED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml:19:13-23:29
 action#android.intent.action.MAIN
-ADDED from D:\FnincCalculator\app\src\main\AndroidManifest.xml:20:17-69
+ADDED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml:20:17-69
 	android:name
-		ADDED from D:\FnincCalculator\app\src\main\AndroidManifest.xml:20:25-66
+		ADDED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml:20:25-66
 category#android.intent.category.LAUNCHER
-ADDED from D:\FnincCalculator\app\src\main\AndroidManifest.xml:22:17-77
+ADDED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml:22:17-77
 	android:name
-		ADDED from D:\FnincCalculator\app\src\main\AndroidManifest.xml:22:27-74
+		ADDED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml:22:27-74
 activity#com.fnincnellinc.fninccalculator.MainActivity
-ADDED from D:\FnincCalculator\app\src\main\AndroidManifest.xml:26:9-29:55
+ADDED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml:26:9-29:55
 	android:screenOrientation
-		ADDED from D:\FnincCalculator\app\src\main\AndroidManifest.xml:28:13-49
+		ADDED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml:28:13-49
 	android:windowSoftInputMode
-		ADDED from D:\FnincCalculator\app\src\main\AndroidManifest.xml:29:13-52
+		ADDED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml:29:13-52
 	android:name
-		ADDED from D:\FnincCalculator\app\src\main\AndroidManifest.xml:27:13-41
+		ADDED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml:27:13-41
 activity#com.fnincnellinc.fninccalculator.HomeActivity
-ADDED from D:\FnincCalculator\app\src\main\AndroidManifest.xml:30:9-33:55
+ADDED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml:30:9-33:55
 	android:screenOrientation
-		ADDED from D:\FnincCalculator\app\src\main\AndroidManifest.xml:32:13-49
+		ADDED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml:32:13-49
 	android:windowSoftInputMode
-		ADDED from D:\FnincCalculator\app\src\main\AndroidManifest.xml:33:13-52
+		ADDED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml:33:13-52
 	android:name
-		ADDED from D:\FnincCalculator\app\src\main\AndroidManifest.xml:31:13-41
+		ADDED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml:31:13-41
 activity#com.fnincnellinc.fninccalculator.WebActivity
-ADDED from D:\FnincCalculator\app\src\main\AndroidManifest.xml:34:9-37:55
+ADDED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml:34:9-37:55
 	android:screenOrientation
-		ADDED from D:\FnincCalculator\app\src\main\AndroidManifest.xml:36:13-49
+		ADDED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml:36:13-49
 	android:windowSoftInputMode
-		ADDED from D:\FnincCalculator\app\src\main\AndroidManifest.xml:37:13-52
+		ADDED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml:37:13-52
 	android:name
-		ADDED from D:\FnincCalculator\app\src\main\AndroidManifest.xml:35:13-40
+		ADDED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml:35:13-40
 activity#com.fnincnellinc.fninccalculator.ContactUsActivity
-ADDED from D:\FnincCalculator\app\src\main\AndroidManifest.xml:38:9-41:55
+ADDED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml:38:9-41:55
 	android:screenOrientation
-		ADDED from D:\FnincCalculator\app\src\main\AndroidManifest.xml:40:13-49
+		ADDED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml:40:13-49
 	android:windowSoftInputMode
-		ADDED from D:\FnincCalculator\app\src\main\AndroidManifest.xml:41:13-52
+		ADDED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml:41:13-52
 	android:name
-		ADDED from D:\FnincCalculator\app\src\main\AndroidManifest.xml:39:13-46
+		ADDED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml:39:13-46
 activity#com.fnincnellinc.fninccalculator.CalenderActivity
-ADDED from D:\FnincCalculator\app\src\main\AndroidManifest.xml:42:9-45:55
+ADDED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml:42:9-45:55
 	android:screenOrientation
-		ADDED from D:\FnincCalculator\app\src\main\AndroidManifest.xml:44:13-49
+		ADDED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml:44:13-49
 	android:windowSoftInputMode
-		ADDED from D:\FnincCalculator\app\src\main\AndroidManifest.xml:45:13-52
+		ADDED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml:45:13-52
 	android:name
-		ADDED from D:\FnincCalculator\app\src\main\AndroidManifest.xml:43:13-45
+		ADDED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml:43:13-45
 activity#com.fnincnellinc.fninccalculator.FeedbackActivity
-ADDED from D:\FnincCalculator\app\src\main\AndroidManifest.xml:46:9-49:55
+ADDED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml:46:9-49:55
 	android:screenOrientation
-		ADDED from D:\FnincCalculator\app\src\main\AndroidManifest.xml:48:13-49
+		ADDED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml:48:13-49
 	android:windowSoftInputMode
-		ADDED from D:\FnincCalculator\app\src\main\AndroidManifest.xml:49:13-52
+		ADDED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml:49:13-52
 	android:name
-		ADDED from D:\FnincCalculator\app\src\main\AndroidManifest.xml:47:13-45
+		ADDED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml:47:13-45
 activity#org.acra.CrashReportDialog
-ADDED from D:\FnincCalculator\app\src\main\AndroidManifest.xml:50:9-55:59
+ADDED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml:50:9-55:59
 	android:excludeFromRecents
-		ADDED from D:\FnincCalculator\app\src\main\AndroidManifest.xml:52:13-46
+		ADDED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml:52:13-46
 	android:launchMode
-		ADDED from D:\FnincCalculator\app\src\main\AndroidManifest.xml:54:13-48
+		ADDED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml:54:13-48
 	android:theme
-		ADDED from D:\FnincCalculator\app\src\main\AndroidManifest.xml:55:13-56
+		ADDED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml:55:13-56
 	android:finishOnTaskLaunch
-		ADDED from D:\FnincCalculator\app\src\main\AndroidManifest.xml:53:13-46
+		ADDED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml:53:13-46
 	android:name
-		ADDED from D:\FnincCalculator\app\src\main\AndroidManifest.xml:51:13-54
+		ADDED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml:51:13-54
 activity#com.fnincnellinc.fninccalculator.CapitalGainActivity
-ADDED from D:\FnincCalculator\app\src\main\AndroidManifest.xml:56:9-59:55
+ADDED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml:56:9-59:55
 	android:screenOrientation
-		ADDED from D:\FnincCalculator\app\src\main\AndroidManifest.xml:58:13-49
+		ADDED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml:58:13-49
 	android:windowSoftInputMode
-		ADDED from D:\FnincCalculator\app\src\main\AndroidManifest.xml:59:13-52
+		ADDED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml:59:13-52
 	android:name
-		ADDED from D:\FnincCalculator\app\src\main\AndroidManifest.xml:57:13-48
+		ADDED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml:57:13-48
 activity#com.fnincnellinc.fninccalculator.TermsActivity
-ADDED from D:\FnincCalculator\app\src\main\AndroidManifest.xml:60:9-51
+ADDED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml:60:9-51
 	android:name
-		ADDED from D:\FnincCalculator\app\src\main\AndroidManifest.xml:60:19-48
+		ADDED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml:60:19-48
 uses-sdk
-INJECTED from D:\FnincCalculator\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from D:\FnincCalculator\app\src\main\AndroidManifest.xml
-INJECTED from D:\FnincCalculator\app\src\main\AndroidManifest.xml
+INJECTED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml
+INJECTED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml
 MERGED from [androidx.appcompat:appcompat:1.0.0] C:\Users\Neeraj\.gradle\caches\transforms-2\files-2.1\24c8333af3f2d43ff2b1c71d3d52d739\appcompat-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.appcompat:appcompat:1.0.0] C:\Users\Neeraj\.gradle\caches\transforms-2\files-2.1\24c8333af3f2d43ff2b1c71d3d52d739\appcompat-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.multidex:multidex:2.0.0] C:\Users\Neeraj\.gradle\caches\transforms-2\files-2.1\b49de40908d20f742852b1e123dcefcf\multidex-2.0.0\AndroidManifest.xml:20:5-43
@@ -222,13 +222,13 @@ MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\Neeraj\.gradle\cach
 MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\Neeraj\.gradle\caches\transforms-2\files-2.1\0f91f258f9d0abaa0e56c019df47bd85\core-runtime-2.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Neeraj\.gradle\caches\transforms-2\files-2.1\c4e2469658fdd8801a5306110b0915fc\interpolator-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Neeraj\.gradle\caches\transforms-2\files-2.1\c4e2469658fdd8801a5306110b0915fc\interpolator-1.0.0\AndroidManifest.xml:20:5-44
-INJECTED from D:\FnincCalculator\app\src\main\AndroidManifest.xml
-INJECTED from D:\FnincCalculator\app\src\main\AndroidManifest.xml
+INJECTED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml
+INJECTED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml
 	android:targetSdkVersion
-		INJECTED from D:\FnincCalculator\app\src\main\AndroidManifest.xml
-		ADDED from D:\FnincCalculator\app\src\main\AndroidManifest.xml
-		INJECTED from D:\FnincCalculator\app\src\main\AndroidManifest.xml
+		INJECTED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml
+		ADDED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml
+		INJECTED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from D:\FnincCalculator\app\src\main\AndroidManifest.xml
-		ADDED from D:\FnincCalculator\app\src\main\AndroidManifest.xml
-		INJECTED from D:\FnincCalculator\app\src\main\AndroidManifest.xml
+		INJECTED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml
+		ADDED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml
+		INJECTED from D:\AndroidStudioProjects\FnincCalculator\app\src\main\AndroidManifest.xml

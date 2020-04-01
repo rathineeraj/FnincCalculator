@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
 
     Button mCalTransferFees, mCalBondCost, mCalMonthlyInstallment,
             mCalculateAll, mReset, mEmail;
-    EditText mPurchasePrice, mBondCost,  mBondAmtCal, mInterestRate,
+    EditText mPurchasePrice, mBondCost, mBondAmtCal, mInterestRate,
             mRepaymentPeriod;
     RadioGroup mVat;
     TextView mTotalTransferCost, mTotalBondCost, mTotalAllCost;
@@ -78,7 +78,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
             DecimalFormat df = new DecimalFormat("#,###.##");
             df.setDecimalSeparatorAlwaysShown(true);
 //            DecimalFormat dfnd = new DecimalFormat("#,###");
-        //    boolean hasFractionalPart = false;
+            //    boolean hasFractionalPart = false;
             mEmail = findViewById(R.id.btnEmail);
             mEmail.setOnClickListener(this);
             mCalTransferFees = findViewById(R.id.btnCalTransFees);
@@ -757,51 +757,51 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
         return (txfd);
     }
 
-    //04-04-2019
+    //01-04-2020
     private double getDeedsOfficeExaminationFee(double v) {
         double exam = 0;
 
         if (v <= 100000) {
-            exam = 37;
+            exam = 39;
         }
         if ((v > 100000) && (v <= 200000)) {
-            exam = 81;
+            exam = 86;
         }
         if ((v > 200000) && (v <= 300000)) {
-            exam = 507;
+            exam = 539;
         }
         if ((v > 300000) && (v <= 600000)) {
-            exam = 632;
+            exam = 673;
         }
         if ((v > 600000) && (v <= 800000)) {
-            exam = 889;
+            exam = 946;
         }
         if ((v > 800000) && (v <= 1000000)) {
-            exam = 1020;
+            exam = 1086;
         }
         if ((v > 1000000) && (v <= 2000000)) {
-            exam = 1146;
+            exam = 1220;
         }
         if ((v > 2000000) && (v <= 4000000)) {
-            exam = 1588;
+            exam = 1691;
         }
         if ((v > 4000000) && (v <= 6000000)) {
-            exam = 1926;
+            exam = 2051;
         }
         if ((v > 6000000) && (v <= 8000000)) {
-            exam = 2293;
+            exam = 2442;
         }
         if ((v > 8000000) && (v <= 10000000)) {
-            exam = 2680;
+            exam = 2854;
         }
         if ((v > 10000000) && (v <= 15000000)) {
-            exam = 3190;
+            exam = 3397;
         }
         if ((v > 15000000) && (v <= 20000000)) {
-            exam = 3831;
+            exam = 4080;
         }
         if (v > 20000000) {
-            exam = 5104;
+            exam = 5435;
         }
 
 
@@ -832,25 +832,25 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
         }
 
         double x;
-        if ((Amt>100000) && (Amt<=500000))  {
-            x=Math.ceil((Amt-100000)/50000);
+        if ((Amt > 100000) && (Amt <= 500000)) {
+            x = Math.ceil((Amt - 100000) / 50000);
             //alert(xyz);
-            txfer=txfer+(x*AmtTXfer2);
+            txfer = txfer + (x * AmtTXfer2);
 
         }
-        if ((Amt>500000) && (Amt<=1000000))  {
-            x=Math.ceil((Amt-500000)/100000);
-            txfer=txfer+(x*AmtTXfer1);
+        if ((Amt > 500000) && (Amt <= 1000000)) {
+            x = Math.ceil((Amt - 500000) / 100000);
+            txfer = txfer + (x * AmtTXfer1);
 
         }
-        if ((Amt>1000000) && (Amt<=5000000))  {
-            x=Math.ceil((Amt-1000000)/200000);
-            txfer=txfer+(x*AmtTXfer1);
+        if ((Amt > 1000000) && (Amt <= 5000000)) {
+            x = Math.ceil((Amt - 1000000) / 200000);
+            txfer = txfer + (x * AmtTXfer1);
         }
 
-        if (Amt>5000000)  {
-            x=Math.ceil((Amt-5000000)/500000);
-            txfer=txfer+(x*AmtTXfer3);
+        if (Amt > 5000000) {
+            x = Math.ceil((Amt - 5000000) / 500000);
+            txfer = txfer + (x * AmtTXfer3);
         }
 
 
@@ -865,50 +865,50 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
 
     }
 
-    // 04-04-2019
+    // 01-04-2020
     private double getBond_DeedsOfficeExaminationFee(double v) {
         double deeds = 0;
         if (v <= 150000) {
-            deeds = 392;
+            deeds = 417;
         }
         if ((v > 150000) && (v <= 300000)) {
-            deeds = 507;
+            deeds = 539;
         }
         if ((v > 300000) && (v <= 600000)) {
-            deeds = 632;
+            deeds = 673;
         }
         if ((v > 600000) && (v <= 800000)) {
-            deeds = 889;
+            deeds = 946;
         }
         if ((v > 800000) && (v <= 1000000)) {
-            deeds = 1020;
+            deeds = 1086;
         }
         if ((v > 1000000) && (v <= 2000000)) {
-            deeds = 1146;
+            deeds = 1220;
         }
         if ((v > 2000000) && (v <= 4000000)) {
-            deeds = 1588;
+            deeds = 1691;
         }
         if ((v > 4000000) && (v <= 6000000)) {
-            deeds = 1926;
+            deeds = 2051;
         }
         if ((v > 6000000) && (v <= 8000000)) {
-            deeds = 2293;
+            deeds = 2442;
         }
         if ((v > 8000000) && (v <= 10000000)) {
-            deeds = 2680;
+            deeds = 2854;
         }
         if ((v > 10000000) && (v <= 15000000)) {
-            deeds = 3190;
+            deeds = 3397;
         }
         if ((v > 15000000) && (v <= 20000000)) {
-            deeds = 3831;
+            deeds = 4080;
         }
         if ((v > 20000000) && (v <= 30000000)) {
-            deeds = 4465;
+            deeds = 4755;
         }
         if (v > 30000000) {
-            deeds = 6380;
+            deeds = 6794;
         }
 
         return deeds;

@@ -20,71 +20,87 @@
         android:layout_centerHorizontal="true"
         android:src="@drawable/bottomtitle" />
 
-    <LinearLayout
+    <ScrollView
         android:id="@+id/llButtons"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:orientation="vertical"
-        android:padding="@dimen/margin10">
+        android:layout_centerInParent="true">
 
-        <Button
-            android:id="@+id/btnCalculator"
+
+        <LinearLayout
+
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/bgbtn"
-            android:text="@string/cost_calculator"
-            android:textColor="#c5c5c5" />
-        <Button
-            android:id="@+id/btnCapitalGain"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/margin10"
-            android:background="@drawable/bgbtn"
-            android:text="@string/capital_gains"
-            android:textColor="#c5c5c5" />
-        <Button
-            android:id="@+id/btnCalender"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/margin10"
-            android:background="@drawable/bgbtn"
-            android:text="@string/calender"
-            android:textColor="#c5c5c5" />
 
-        <Button
-            android:id="@+id/btnLogin"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/margin10"
-            android:background="@drawable/bgbtn"
-            android:text="@string/login_account"
-            android:textColor="#c5c5c5" />
+            android:orientation="vertical"
+            android:padding="@dimen/margin10">
 
-        <Button
-            android:id="@+id/btnFeedback"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/margin10"
-            android:background="@drawable/bgbtn"
-            android:text="@string/feedback"
-            android:textColor="#c5c5c5" />
+            <Button
+                android:id="@+id/btnCalculator"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bgbtn"
+                android:text="@string/cost_calculator"
+                android:textColor="#c5c5c5" />
 
-        <Button
-            android:id="@+id/btnContactUs"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/margin10"
-            android:background="@drawable/bgbtn"
-            android:text="@string/contact_us"
-            android:textColor="#c5c5c5" />
+            <Button
+                android:id="@+id/btnCapitalGain"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin10"
+                android:background="@drawable/bgbtn"
+                android:text="@string/capital_gains"
+                android:textColor="#c5c5c5" />
 
+            <Button
+                android:id="@+id/btnCalender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin10"
+                android:background="@drawable/bgbtn"
+                android:text="@string/calender"
+                android:textColor="#c5c5c5" />
 
+            <Button
+                android:id="@+id/btnLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin10"
+                android:background="@drawable/bgbtn"
+                android:text="@string/login_account"
+                android:textColor="#c5c5c5" />
 
+            <Button
+                android:id="@+id/btnFeedback"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin10"
+                android:background="@drawable/bgbtn"
+                android:text="@string/feedback"
+                android:textColor="#c5c5c5" />
 
+            <Button
+                android:id="@+id/btnContactUs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin10"
+                android:background="@drawable/bgbtn"
+                android:text="@string/contact_us"
+                android:textColor="#c5c5c5" />
 
-    </LinearLayout>
+            <Button
+                android:id="@+id/btnInstagram"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin10"
+                android:background="@drawable/bgbtn"
+                android:paddingStart="@dimen/margin10"
+                android:drawableStart="@drawable/ic_instagram"
+                android:text="@string/instagram"
+                android:textColor="#c5c5c5" />
 
+        </LinearLayout>
+    </ScrollView>
 
     <TextView
         android:id="@+id/tvInfo"
@@ -95,10 +111,10 @@
         android:marqueeRepeatLimit="marquee_forever"
         android:padding="5dip"
         android:scrollHorizontally="true"
-        android:textStyle="bold"
-        android:textSize="30sp"
         android:singleLine="true"
-        android:text="We can register in 17 days. Ask us how..." />
+        android:text="We can register in 17 days. Ask us how..."
+        android:textSize="30sp"
+        android:textStyle="bold" />
 
     <ImageView
         android:layout_width="wrap_content"

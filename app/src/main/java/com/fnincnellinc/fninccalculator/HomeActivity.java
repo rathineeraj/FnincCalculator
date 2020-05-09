@@ -1,7 +1,9 @@
 package com.fnincnellinc.fninccalculator;
 
+import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.graphics.Typeface;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
@@ -17,7 +19,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class HomeActivity extends AppCompatActivity {
 
-    Button btnLogin, btnCalculator, btnContact, btnCalender, btnFeedback, btnCapitalGain;
+    Button btnLogin, btnCalculator, btnContact, btnCalender, btnFeedback, btnCapitalGain, btnInstagram;
 
 
     @Override
@@ -84,6 +86,23 @@ public class HomeActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i = new Intent(HomeActivity.this, CapitalGainActivity.class);
                 startActivity(i);
+            }
+        });
+        btnInstagram = findViewById(R.id.btnInstagram);
+        btnInstagram.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Uri uri = Uri.parse("http://instagram.com/_u/faurienell");
+                Intent likeIng = new Intent(Intent.ACTION_VIEW, uri);
+
+                likeIng.setPackage("com.instagram.android");
+
+                try {
+                    startActivity(likeIng);
+                } catch (ActivityNotFoundException e) {
+                    startActivity(new Intent(Intent.ACTION_VIEW,
+                            Uri.parse("http://instagram.com/faurienell")));
+                }
             }
         });
     }

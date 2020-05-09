@@ -7,7 +7,6 @@
     <string name="crash_dialog_title">Crash Report</string>
     <string name="crash_message">Send Crash report to developer</string>
     <string name="crash_report_comments">Say something about this Crash please</string>
-
     <string name="cost_calculator">Transfer and Bond Costs Calculator</string>
     <string name="login_account">Login / Create Account</string>
     <string name="contact_us">Contact Us</string>
@@ -15,6 +14,7 @@
     <string name="find_date">Find Date</string>
     <string name="feedback">Feedback</string>
     <string name="capital_gains">Capital Gains Tax Calculator</string>
+    <string name="instagram">Follow us on Instagram</string>
 
     <string name="terms">Take note that cessions of exclusive use areas in certain sectional title schemes will increase the costs. You may also be required to provide a contribution towards levy clearance in sectional title or home owners clearance in conventional property. If more than one property is included in the same instrument the fee will increase by 15% per additional property</string>
     <string name="interest_rate">10.25</string>

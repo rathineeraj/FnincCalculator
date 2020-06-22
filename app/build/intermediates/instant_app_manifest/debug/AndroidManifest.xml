@@ -2,8 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.fnincnellinc.fninccalculator"
     android:targetSandboxVersion="2"
-    android:versionCode="29"
-    android:versionName="4.5" >
+    android:versionCode="31"
+    android:versionName="4.7" >
 
     <uses-sdk
         android:minSdkVersion="21"
@@ -19,7 +19,6 @@
         android:debuggable="true"
         android:icon="@drawable/iconf"
         android:label="@string/app_name"
-        android:testOnly="true"
         android:theme="@style/AppTheme" >
         <activity
             android:name="com.fnincnellinc.fninccalculator.SplashScreen"

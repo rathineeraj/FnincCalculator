@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.text.InputType;
 import android.text.TextUtils;
 import android.text.method.DigitsKeyListener;
-import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.Window;
@@ -77,101 +76,19 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
                     WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
             DecimalFormat df = new DecimalFormat("#,###.##");
             df.setDecimalSeparatorAlwaysShown(true);
-//            DecimalFormat dfnd = new DecimalFormat("#,###");
-            //    boolean hasFractionalPart = false;
+
             mEmail = findViewById(R.id.btnEmail);
             mEmail.setOnClickListener(this);
             mCalTransferFees = findViewById(R.id.btnCalTransFees);
             mPurchasePrice = findViewById(R.id.etPurchasePrice);
             mPurchasePrice.setInputType(InputType.TYPE_CLASS_NUMBER);
             mCalTransferFees.setOnClickListener(this);
-            /*
-             * mPurchasePrice.addTextChangedListener(new TextWatcher() {
-             *
-             * @Override public void onTextChanged(CharSequence s, int start,
-             * int before, int count) {
-             * mPurchasePrice.removeTextChangedListener(this);
-             *
-             * try { int inilen, endlen; inilen =
-             * mPurchasePrice.getText().length();
-             *
-             * String v = mPurchasePrice.getText().toString() .replace(" ", "");
-             * Number n = df.parse(v); int cp =
-             * mPurchasePrice.getSelectionStart(); if (hasFractionalPart) {
-             * mPurchasePrice.setText(df.format(n)); } else {
-             *
-             * String mn = dfnd.format(n); mn = mn.replace(",", " ");
-             * mPurchasePrice.setText(mn);
-             *
-             * } endlen = mPurchasePrice.getText().length(); int sel = (cp +
-             * (endlen - inilen)); if (sel > 0 && sel <=
-             * mPurchasePrice.getText().length()) {
-             * mPurchasePrice.setSelection(sel); } else { // place cursor at the
-             * end? mPurchasePrice.setSelection(mPurchasePrice
-             * .getText().length() - 1); } } catch (NumberFormatException nfe) {
-             * // do nothing? } catch (ParseException e) { // do nothing? }
-             * catch (java.text.ParseException e) { //
-             * block e.printStackTrace(); }
-             *
-             * mPurchasePrice.addTextChangedListener(this);
-             *
-             * }
-             *
-             * @Override public void beforeTextChanged(CharSequence s, int
-             * start, int count, int after) { //
-             *
-             * }
-             *
-             * @Override public void afterTextChanged(Editable s) { //
-             * Auto-generated method stub // addCommaEx(s.toString());
-             *
-             * } });
-             */
+
             mCalBondCost = findViewById(R.id.btnCalBondCost);
             mBondCost = findViewById(R.id.etBondAmt);
             mBondCost.setInputType(InputType.TYPE_CLASS_NUMBER);
             mCalBondCost.setOnClickListener(this);
 
-            /*
-             * mBondCost.addTextChangedListener(new TextWatcher() {
-             *
-             * @Override public void onTextChanged(CharSequence s, int start,
-             * int before, int count) {
-             * mBondCost.removeTextChangedListener(this);
-             *
-             * try { int inilen, endlen; inilen = mBondCost.getText().length();
-             *
-             * String v = mBondCost.getText().toString() .replace(" ", "");
-             * Number n = df.parse(v); int cp = mBondCost.getSelectionStart();
-             * if (hasFractionalPart) { mBondCost.setText(df.format(n)); } else
-             * {
-             *
-             * String mn = dfnd.format(n); mn = mn.replace(",", " ");
-             * mBondCost.setText(mn);
-             *
-             * } endlen = mBondCost.getText().length(); int sel = (cp + (endlen
-             * - inilen)); if (sel > 0 && sel <= mBondCost.getText().length()) {
-             * mBondCost.setSelection(sel); } else { // place cursor at the end?
-             * mBondCost .setSelection(mBondCost.getText().length() - 1); } }
-             * catch (NumberFormatException nfe) { // do nothing? } catch
-             * (ParseException e) { // do nothing? } catch
-             * (java.text.ParseException e) { //
-             * e.printStackTrace(); }
-             *
-             * mBondCost.addTextChangedListener(this);
-             *
-             * }
-             *
-             * @Override public void beforeTextChanged(CharSequence s, int
-             * start, int count, int after) { //
-             *
-             * }
-             *
-             * @Override public void afterTextChanged(Editable s) { //
-             * Auto-generated method stub // addCommaEx(s.toString());
-             *
-             * } });
-             */
 
             mTotalTransferCost = findViewById(R.id.tvTotalTransferCost);
             mTotalBondCost = findViewById(R.id.tvTotalBondCost);
@@ -210,48 +127,6 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
             mRepaymentPeriod = findViewById(R.id.etRepaymentPeriod);
             mRepaymentPeriod.setInputType(InputType.TYPE_CLASS_NUMBER);
             mMonthlyInstallment = findViewById(R.id.tvMonthly);
-            /*
-             * mBondAmtCal.addTextChangedListener(new TextWatcher() {
-             *
-             * @Override public void onTextChanged(CharSequence s, int start,
-             * int before, int count) {
-             * mBondAmtCal.removeTextChangedListener(this);
-             *
-             * try { int inilen, endlen; inilen =
-             * mBondAmtCal.getText().length();
-             *
-             * String v = mBondAmtCal.getText().toString() .replace(" ", "");
-             * Number n = df.parse(v); int cp = mBondAmtCal.getSelectionStart();
-             * if (hasFractionalPart) { mBondAmtCal.setText(df.f ormat(n)); }
-             * else {
-             *
-             * String mn = dfnd.format(n); mn = mn.replace(",", " ");
-             * mBondAmtCal.setText(mn);
-             *
-             * } endlen = mBondAmtCal.getText().length(); int sel = (cp +
-             * (endlen - inilen)); if (sel > 0 && sel <=
-             * mBondAmtCal.getText().length()) { mBondAmtCal.setSelection(sel);
-             * } else { // place cursor at the end?
-             * mBondAmtCal.setSelection(mBondAmtCal.getText() .length() - 1); }
-             * } catch (NumberFormatException nfe) { // do nothing? } catch
-             * (ParseException e) { // do nothing? } catch
-             * (java.text.ParseException e) { //
-             * e.printStackTrace(); }
-             *
-             * mBondAmtCal.addTextChangedListener(this);
-             *
-             * }
-             *
-             * @Override public void beforeTextChanged(CharSequence s, int
-             * start, int count, int after) { //
-             *
-             * }
-             *
-             * @Override public void afterTextChanged(Editable s) { //
-             * Auto-generated method stub // addCommaEx(s.toString());
-             *
-             * } });
-             */
 
             mCalMonthlyInstallment = findViewById(R.id.btnInstallmentCal);
             mCalMonthlyInstallment.setOnClickListener(this);
@@ -263,45 +138,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
             mCalculateAll.setOnClickListener(this);
             mDeposit = findViewById(R.id.etDeposit);
             mDeposit.setInputType(InputType.TYPE_CLASS_NUMBER);
-            /*
-             * mDeposit.addTextChangedListener(new TextWatcher() {
-             *
-             * @Override public void onTextChanged(CharSequence s, int start,
-             * int before, int count) {
-             * mDeposit.removeTextChangedListener(this);
-             *
-             * try { int inilen, endlen; inilen = mDeposit.getText().length();
-             *
-             * String v = mDeposit.getText().toString() .replace(" ", "");
-             * Number n = df.parse(v); int cp = mDeposit.getSelectionStart(); if
-             * (hasFractionalPart) { mDeposit.setText(df.format(n)); } else {
-             *
-             * String mn = dfnd.format(n); mn = mn.replace(",", " ");
-             * mDeposit.setText(mn);
-             *
-             * } endlen = mDeposit.getText().length(); int sel = (cp + (endlen -
-             * inilen)); if (sel > 0 && sel <= mDeposit.getText().length()) {
-             * mDeposit.setSelection(sel); } else { // place cursor at the end?
-             * mDeposit.setSelection(mDeposit.getText().length() - 1); } } catch
-             * (NumberFormatException nfe) { // do nothing? } catch
-             * (ParseException e) { // do nothing? } catch
-             * (java.text.ParseException e) { //
-             * e.printStackTrace(); }
-             *
-             * mDeposit.addTextChangedListener(this);
-             *
-             * }
-             *
-             * @Override public void beforeTextChanged(CharSequence s, int
-             * start, int count, int after) { //
-             *
-             * }
-             *
-             * @Override public void afterTextChanged(Editable s) { //
-             * Auto-generated method stub // addCommaEx(s.toString());
-             *
-             * } });
-             */
+
             mReset = findViewById(R.id.btnReset);
             mReset.setOnClickListener(this);
 
@@ -421,15 +258,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
                         "\\s+", "");
                 String tempBondAmt1 = (tempBondAmt).replace(",", "");
                 BondAmount = Double.parseDouble(tempBondAmt1.replace(" ", ""));
-			/*if (!TextUtils.isEmpty(mDeposit.getText().toString())) {
-				String tempDesposit = (mDeposit.getText().toString())
-						.replaceAll("\\s+", "");
-				String tempDeposit1 = (tempDesposit).replace(",", "");
-				Deposit = Double.parseDouble(tempDeposit1.replace(" ", ""));
 
-				BondAmount = BondAmount - Deposit;
-			}
-*/
                 CalTotalBondCost();
                 mTotalBondCost.setText(addCommaEx(sTotalBondCost));
                 String msBond = String.format("%.2f", BondAmount);
@@ -579,20 +408,20 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
         String tempPPP = (tempPP).replace(",", "");
         PurchasePrice = Double.parseDouble(tempPPP.replace(" ", ""));
 
-        Log.e("PurchasePrice", "" + PurchasePrice);
+
         sPurchasePrice = (String.format("%.2f", PurchasePrice));
 
         TransferDuty = getTransferDuty(PurchasePrice);
-        Log.e("TransferDuty", "" + TransferDuty);
+
         sTransferDuty = (String.format("%.2f", TransferDuty));
 
         DeedsOfficeExaminationFee = getDeedsOfficeExaminationFee(PurchasePrice);
-        Log.e("DeedsOfficeExamination", "" + DeedsOfficeExaminationFee);
+
         sDeedsOfficeExaminationFee = (String.format("%.2f",
                 DeedsOfficeExaminationFee));
 
         ConveyancerTariffFee = getConveyancerTariffFee(PurchasePrice);
-        Log.e("ConveyancerTariffFee", "" + ConveyancerTariffFee);
+
         sConveyancerTariffFee = (String.format("%.2f", ConveyancerTariffFee));
 
         PettiesSundryDisbursements = 1150;
@@ -614,7 +443,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
                 RatesClearanceCertificateCosts));
 
         VATonConveyancerTariffFee = GetVATonConveyancerTariffFee(ConveyancerTariffFee);
-        Log.e("VATonConveyancerTarif", "" + VATonConveyancerTariffFee);
+
         sVATonConveyancerTariffFee = (String.format("%.2f",
                 VATonConveyancerTariffFee));
 
@@ -655,13 +484,12 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
         sBondAmount = (String.format("%.2f", BondAmount));
 
         Bond_DeedsOfficeExaminationFee = getBond_DeedsOfficeExaminationFee(BondAmount);
-        Log.e("Bond_DeedsOfficeExam", ""
-                + Bond_DeedsOfficeExaminationFee);
+
         sBond_DeedsOfficeExaminationFee = (String.format("%.2f",
                 Bond_DeedsOfficeExaminationFee));
 
         Bond_ConveyancerTariffFee = getConveyancerTariffFee(BondAmount);
-        Log.e("Bond_ConveyancerTariff", "" + Bond_ConveyancerTariffFee);
+
         sBond_ConveyancerTariffFee = (String.format("%.2f",
                 Bond_ConveyancerTariffFee));
 
@@ -682,8 +510,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
                 Bond_ElectronicDocumentGenerationFee));
 
         Bond_VATonConveyancerTariffFee = getBond_VATonConveyancerTariffFee(Bond_ConveyancerTariffFee);
-        Log.e("Bond_VATonConveyancer", ""
-                + Bond_VATonConveyancerTariffFee);
+
         sBond_VATonConveyancerTariffFee = (String.format("%.2f",
                 Bond_VATonConveyancerTariffFee));
 
@@ -808,27 +635,27 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
         return exam;
     }
 
-    // 31-05-2019 changed
+    // 22-06-2020 changed
     private double getConveyancerTariffFee(double Amt) {
-        double AmtTXfer1 = 1540;
-        double AmtTXfer2 = 770;
-        double AmtTXfer3 = 1925;
+        double AmtTXfer1 = 1600;
+        double AmtTXfer2 = 800;
+        double AmtTXfer3 = 2000;
 
         double txfer = 0;
         if (Amt <= 100000) {
-            txfer = 5000;
+            txfer = 5200;
         }
         if ((Amt > 100000) && (Amt <= 500000)) {
-            txfer = 5000;
+            txfer = 5200;
         }
         if ((Amt > 500000) && (Amt <= 1000000)) {
-            txfer = 11160;
+            txfer = 11600;
         }
         if ((Amt > 1000000) && (Amt <= 5000000)) {
-            txfer = 18860;
+            txfer = 19600;
         }
         if (Amt > 5000000) {
-            txfer = 49660;
+            txfer = 51600;
         }
 
         double x;
@@ -914,58 +741,6 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
         return deeds;
     }
 
-    // no use of this method
-   /* private double getBond_ConveyancerTariffFee(double Amt) {
-        double AmtBondC1 = 1180;
-        double AmtBondC2 = 590;
-        double AmtBondC3 = 295;
-
-        double bond = 0;
-        if (Amt <= 100000) {
-            bond = 3360;
-        } else if ((Amt > 100000) && (Amt <= 125000)) {
-            bond = 3500;
-        } else if ((Amt > 125000) && (Amt <= 150000)) {
-            bond = 3625;
-        } else if ((Amt > 150000) && (Amt <= 175000)) {
-            bond = 3900;
-        } else if ((Amt > 175000) && (Amt <= 200000)) {
-            bond = 4030;
-        } else if ((Amt > 200000) && (Amt <= 250000)) {
-            bond = 4435;
-        } else if ((Amt > 250000) && (Amt <= 300000)) {
-            bond = 4970;
-        } else if ((Amt > 300000) && (Amt <= 350000)) {
-            bond = 5510;
-        } else if ((Amt > 350000) && (Amt <= 400000)) {
-            bond = 6180;
-        } else if ((Amt > 400000) && (Amt <= 450000)) {
-            bond = 6720;
-        } else if ((Amt > 450000) && (Amt <= 500000)) {
-            bond = 7260;
-        }
-        double x;
-        if (bond == 0) {
-            bond = bond + 7260;
-
-            if ((Amt > 500000) && (Amt <= 1000000)) {
-                x = Math.ceil((Amt - 500000) / 100000);
-                bond = bond + (x * AmtBondC1);
-
-            } else if ((Amt > 1000000) && (Amt <= 5000000)) {
-                x = Math.ceil((Amt - 1000000) / 100000);
-                bond = bond + (5 * AmtBondC1);
-                bond = bond + (x * AmtBondC2);
-            } else if (Amt > 5000000) {
-                x = Math.ceil((Amt - 5000000) / 100000);
-                bond = bond + (5 * AmtBondC1);
-                bond = bond + (40 * AmtBondC2);
-                bond = bond + (x * AmtBondC3);
-            }
-        }
-        return bond;
-
-    }*/
 
     //31-05-2018
     private double getBond_VATonConveyancerTariffFee(double Amt) {
@@ -1020,27 +795,8 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
         }
 
         return A;
-        /*
-         * Log.e("count", "" + A); mBondCost.setText(A);
-         */
+
     }
-    /*
-     * String numVar = TheNum; String commaNumber = ""; String thenumber = "";
-     * String thefraction = ""; int j = numVar.indexOf("."); int i =
-     * numVar.length();
-     *
-     * if (j > 0) { // found a period. String tvar = numVar + "00"; numVar =
-     * numVar.substring(0, j);
-     *
-     * for (i = j; i < j + 3; i++) { thefraction = thefraction + tvar.charAt(i);
-     * } } else { // no period found thefraction = ".00"; } j = numVar.length();
-     *
-     * for (i = j; i > 0; i--) { if ((i != j) && ((j - i) % 3 == 0)) thenumber =
-     * thenumber + " "; thenumber = thenumber + numVar.charAt(i - 1); } j =
-     * thenumber.length(); for (i = j; i >= 0; i--) commaNumber = commaNumber +
-     * thenumber.charAt(i);
-     *
-     * commaNumber = commaNumber + thefraction; return commaNumber; }
-     */
+
 
 }

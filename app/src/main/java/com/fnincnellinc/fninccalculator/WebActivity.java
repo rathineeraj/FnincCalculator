@@ -18,7 +18,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class WebActivity extends AppCompatActivity {
 
     WebView browser;
-    String URL = "https://www.ghosttracker.korbitec.com";
+    String URL = "https://lexistracker.co.za";//https://www.ghosttracker.korbitec.com";
     private ProgressBar mProgressBar;
 
     @Override

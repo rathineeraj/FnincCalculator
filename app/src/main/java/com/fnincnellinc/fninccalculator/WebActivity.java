@@ -18,7 +18,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class WebActivity extends AppCompatActivity {
 
     WebView browser;
-    String URL = "https://lexistracker.co.za";//https://www.ghosttracker.korbitec.com";
+    String URL = "https://lexistracker.co.za"; //https://www.ghosttracker.korbitec.com";
     private ProgressBar mProgressBar;
 
     @Override
@@ -47,8 +47,8 @@ public class WebActivity extends AppCompatActivity {
         // Load the webpage
         browser.loadUrl(URL);
     }
-    public class MyWebClient extends WebViewClient
-    {
+
+    public class MyWebClient extends WebViewClient {
 
         @Override
         public void onPageFinished(WebView view, String url) {

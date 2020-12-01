@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/FnincCalculator.iml" filepath="$PROJECT_DIR$/FnincCalculator.iml" group="FnincCalculator" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="FnincCalculator/app" />
+      <module fileurl="file://$PROJECT_DIR$/FnincCalculator.iml" filepath="$PROJECT_DIR$/FnincCalculator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/FnincCalculator.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/FnincCalculator.app.iml" />
     </modules>
   </component>
 </project>

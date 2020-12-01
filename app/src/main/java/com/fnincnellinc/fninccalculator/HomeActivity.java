@@ -21,7 +21,6 @@ public class HomeActivity extends AppCompatActivity {
 
     Button btnLogin, btnCalculator, btnContact, btnCalender, btnFeedback, btnCapitalGain, btnInstagram;
 
-
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

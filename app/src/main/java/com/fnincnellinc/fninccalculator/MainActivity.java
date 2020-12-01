@@ -285,7 +285,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
                     String tempDeposit1 = (tempDesposit).replace(",", "");
                     Deposit = Double.parseDouble(tempDeposit1.replace(" ", ""));
 
-                    BondAmount = BondAmount - Deposit;
+
                 }
 
                 CalTotalTransferFees();

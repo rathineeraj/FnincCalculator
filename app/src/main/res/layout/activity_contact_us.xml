@@ -147,36 +147,6 @@
                     android:text="f 086 617 8549" />
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:padding="5dp"
-                    android:text="Cherise De Vos"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:autoLink="phone"
-                    android:padding="5dp"
-                    android:text="t 011 560 7121" />
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:autoLink="phone"
-                    android:padding="5dp"
-                    android:text="f 086 510 7143" />
-            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -206,7 +176,38 @@
                     android:layout_weight="1"
                     android:autoLink="phone"
                     android:padding="5dp"
-                    android:text="f 086 510 7143" />
+                    android:text="f 011 759 6960" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="5dp"
+                    android:text="Maryke De Wet"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:autoLink="phone"
+                    android:padding="5dp"
+                    android:text="t 011 560 7121" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:autoLink="phone"
+                    android:padding="5dp"
+                    android:text="f 011 759 7960" />
             </LinearLayout>
         </LinearLayout>
 
@@ -322,7 +323,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:autoLink="phone"
-                    android:text="f 086 613 7844" />
+                    android:text="f 011 759 7960" />
 
                <!-- <TextView
                     android:layout_width="0dp"
@@ -380,7 +381,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:padding="5dp"
-                    android:text="Wendy Powell"
+                    android:text="Micaela Lee Smith"
                     android:textStyle="bold" />
 
                 <TextView
@@ -450,38 +451,7 @@
                     android:layout_weight="1"
                     android:autoLink="phone"
                     android:padding="5dp"
-                    android:text="f 086 297 6069" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:padding="5dp"
-                    android:text="Valentina Moodley"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:autoLink="phone"
-                    android:padding="5dp"
-                    android:text="t 011 560 7112" />
-
-               <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:autoLink="phone"
-                    android:padding="5dp"
-                    android:text="f 086 575 7719" />
+                    android:text="f 011 759 7960" />
             </LinearLayout>
 
             <LinearLayout
@@ -506,7 +476,69 @@
                     android:padding="5dp"
                     android:text="t 011 560 7114" />
 
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:autoLink="phone"
+                    android:padding="5dp"
+                    android:text="f 011 759 7960" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="5dp"
+                    android:text="Noluthando Fellon Nhlapo"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:autoLink="phone"
+                    android:padding="5dp"
+                    android:text="t 011 560 7112" />
+
                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:autoLink="phone"
+                    android:padding="5dp"
+                    android:text="f 011 759 7960" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="5dp"
+                    android:text="Valentina Moodley"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:autoLink="phone"
+                    android:padding="5dp"
+                    android:text="t 011 560 7122" />
+
+                <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -566,7 +598,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:autoLink="phone"
-                    android:text="f 086 617 8553" />
+                    android:text="f 086 641 1404" />
             </LinearLayout>
 
 
@@ -583,7 +615,7 @@
                 android:layout_height="wrap_content"
                 android:background="@android:color/black"
                 android:padding="10dp"
-                android:text="Client liaison manager"
+                android:text="Social Media and Client Liaison Officer"
                 android:textColor="@android:color/white"
                 android:textSize="16sp"
                 android:textStyle="bold" />

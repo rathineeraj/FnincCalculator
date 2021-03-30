@@ -501,7 +501,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
         sBond_DeedsOfficeSearchFee = (String.format("%.2f",
                 Bond_DeedsOfficeSearchFee));
 
-        Bond_FICAComplianceFee = 253;
+        Bond_FICAComplianceFee = 345;
         sBond_FICAComplianceFee = (String
                 .format("%.2f", Bond_FICAComplianceFee));
 
@@ -584,7 +584,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
         return (txfd);
     }
 
-    //01-04-2020
+    //01-04-2021
     private double getDeedsOfficeExaminationFee(double v) {
         double exam = 0;
 
@@ -604,7 +604,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
             exam = 946;
         }
         if ((v > 800000) && (v <= 1000000)) {
-            exam = 1086;
+            exam = 946;
         }
         if ((v > 1000000) && (v <= 2000000)) {
             exam = 1220;
@@ -628,14 +628,14 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
             exam = 4080;
         }
         if (v > 20000000) {
-            exam = 5435;
+            exam = 4080;
         }
 
 
         return exam;
     }
 
-    // 22-06-2020 changed
+    // 01-04-2021 changed
     private double getConveyancerTariffFee(double Amt) {
         double AmtTXfer1 = 1600;
         double AmtTXfer2 = 800;
@@ -688,7 +688,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
     // 31-05-2018
     private double GetVATonConveyancerTariffFee(double Amt) {
         double VAT_rate = 15;
-        return Math.round((Amt * (VAT_rate / 100)));
+        return ((Amt * (VAT_rate / 100)));
 
     }
 

@@ -19,7 +19,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class HomeActivity extends AppCompatActivity {
 
-    Button btnLogin, btnCalculator, btnContact, btnCalender, btnFeedback, btnCapitalGain, btnInstagram;
+    Button btnLogin, btnCalculator, btnContact, btnCalender, btnFeedback, btnCapitalGain, btnInstagram,btnYoutube;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -101,6 +101,24 @@ public class HomeActivity extends AppCompatActivity {
                 } catch (ActivityNotFoundException e) {
                     startActivity(new Intent(Intent.ACTION_VIEW,
                             Uri.parse("http://instagram.com/faurienell")));
+                }
+            }
+        });
+
+        btnYoutube = findViewById(R.id.btnYoutube);
+        btnYoutube.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Uri uri = Uri.parse("https://www.youtube.com/channel/UCkfgObQjMd3ZAe4qrE7iMAg/videos");
+                Intent likeIng = new Intent(Intent.ACTION_VIEW, uri);
+
+                likeIng.setPackage("com.google.android.youtube");
+
+                try {
+                    startActivity(likeIng);
+                } catch (ActivityNotFoundException e) {
+                    startActivity(new Intent(Intent.ACTION_VIEW,
+                            Uri.parse("https://www.youtube.com/channel/UCkfgObQjMd3ZAe4qrE7iMAg/videos")));
                 }
             }
         });

@@ -71,6 +71,28 @@
                 android:textColor="#c5c5c5" />
 
             <Button
+                android:id="@+id/btnInstagram"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin10"
+                android:background="@drawable/bgbtn"
+                android:paddingStart="@dimen/margin10"
+                android:drawableStart="@drawable/ic_instagram"
+                android:text="@string/instagram"
+                android:textColor="#c5c5c5" />
+
+            <Button
+                android:id="@+id/btnYoutube"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin10"
+                android:background="@drawable/bgbtn"
+                android:paddingStart="@dimen/margin10"
+                android:drawableStart="@drawable/youtube_icon"
+                android:text="@string/youtube"
+                android:textColor="#c5c5c5" />
+
+            <Button
                 android:id="@+id/btnFeedback"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -88,16 +110,7 @@
                 android:text="@string/contact_us"
                 android:textColor="#c5c5c5" />
 
-            <Button
-                android:id="@+id/btnInstagram"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/margin10"
-                android:background="@drawable/bgbtn"
-                android:paddingStart="@dimen/margin10"
-                android:drawableStart="@drawable/ic_instagram"
-                android:text="@string/instagram"
-                android:textColor="#c5c5c5" />
+
 
         </LinearLayout>
     </ScrollView>

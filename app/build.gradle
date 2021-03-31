@@ -9,8 +9,8 @@ android {
         targetSdkVersion 29
         minSdkVersion 21
         multiDexEnabled true
-        versionCode 35
-        versionName "5.1"
+        versionCode 36
+        versionName "5.2"
 
     }
 

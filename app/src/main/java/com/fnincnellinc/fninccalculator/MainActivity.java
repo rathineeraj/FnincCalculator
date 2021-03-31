@@ -501,7 +501,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
         sBond_DeedsOfficeSearchFee = (String.format("%.2f",
                 Bond_DeedsOfficeSearchFee));
 
-        Bond_FICAComplianceFee = 345;
+        Bond_FICAComplianceFee = 253;
         sBond_FICAComplianceFee = (String
                 .format("%.2f", Bond_FICAComplianceFee));
 

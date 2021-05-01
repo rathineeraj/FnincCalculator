@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.text.InputType;
 import android.text.TextUtils;
 import android.text.method.DigitsKeyListener;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.Window;
@@ -635,27 +636,27 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
         return exam;
     }
 
-    // 01-04-2021 changed
+    // 01-04-2021 changed 01-05-2021
     private double getConveyancerTariffFee(double Amt) {
-        double AmtTXfer1 = 1600;
-        double AmtTXfer2 = 800;
-        double AmtTXfer3 = 2000;
+        double AmtTXfer1 = 1660;
+        double AmtTXfer2 = 860;
+        double AmtTXfer3 = 4200;
 
         double txfer = 0;
         if (Amt <= 100000) {
-            txfer = 5200;
+            txfer = 5400;
         }
         if ((Amt > 100000) && (Amt <= 500000)) {
-            txfer = 5200;
+            txfer = 5400;
         }
         if ((Amt > 500000) && (Amt <= 1000000)) {
-            txfer = 11600;
+            txfer = 12280;
         }
         if ((Amt > 1000000) && (Amt <= 5000000)) {
-            txfer = 19600;
+            txfer = 20580;
         }
         if (Amt > 5000000) {
-            txfer = 51600;
+            txfer = 53780;
         }
 
         double x;
@@ -676,8 +677,9 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
         }
 
         if (Amt > 5000000) {
-            x = Math.ceil((Amt - 5000000) / 500000);
+            x = Math.ceil((Amt - 5000000) / 1000000);
             txfer = txfer + (x * AmtTXfer3);
+
         }
 
 
